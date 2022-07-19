@@ -94,7 +94,7 @@ if int(update_version) <= version:
     print('Script has Last Update')
 else:
     open('Hash_Twitter.py', 'wb').write(check_updates.content)
-
+    sys.exit()
 session = requests.session()
 
 r = session.get('https://twitter.com/i/flow/login')
