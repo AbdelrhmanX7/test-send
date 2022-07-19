@@ -1,14 +1,14 @@
-version = '0.2'
+version = 3
 
 import requests
 
-url = 'https://raw.githubusercontent.com/AbdelrhmanX7/twitter_api/main/Hash_Twitter.py'
+url = 'https://raw.githubusercontent.com/AbdelrhmanX7/test-send/main/Hash_Twitter.py'
 
 check_updates = requests.get(url, allow_redirects=True)
 
 update_version = check_updates.content.decode('UTF-8')
 
-update_version = update_version[11: update_version.index("\n") - 2]
+update_version = update_version[11: update_version.index("\n") - 1]
 
 if update_version == version:
     print('Script has Last Update')
@@ -21,7 +21,7 @@ r = session.get('https://twitter.com/i/flow/login')
 
 save_string = r.content.decode('UTF-8')
 
-res = save_string[save_string.index('154'): save_string.index('Max-Age') - 2]
+res = save_string[save_string.index('decodeURIComponent("gt=') + 23: save_string.index('Max-Age') - 2]
 
 headers = {
     'accept-encoding': 'gzip, deflate, br',
