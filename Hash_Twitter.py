@@ -209,34 +209,30 @@ headers = {
 
 number_of_tweet = 1
 
-def send_tweet():
-    global number_of_tweet
-    choose_random_tweet = random.randint(0, len(arr) - 1)
-    Tweet_Text = arr[choose_random_tweet] + f"\nللمرة {random.randint(0, 99999999)} دة حقنا"
-    SEND_TWEET = session.post('https://twitter.com/i/api/graphql/MIGRPGIYo1iAWFy_FXUJUA/CreateTweet',
-                              headers=headers,
-                              json={"variables": {"tweet_text": Tweet_Text,
-                                                  "media": {"media_entities": [], "possibly_sensitive": 'false'},
-                                                  "withDownvotePerspective": 'false',
-                                                  "withReactionsMetadata": 'false',
-                                                  "withReactionsPerspective": 'false',
-                                                  "withSuperFollowsTweetFields": 'true',
-                                                  "withSuperFollowsUserFields": 'true',
-                                                  "semantic_annotation_ids": [],
-                                                  "dark_request": 'false'},
-                                    "features": {"dont_mention_me_view_api_enabled": 'true',
-                                                 "interactive_text_enabled": 'true',
-                                                 "responsive_web_uc_gql_enabled": 'false',
-                                                 "vibe_tweet_context_enabled": 'false',
-                                                 "responsive_web_edit_tweet_api_enabled": 'false',
-                                                 "standardized_nudges_misinfo": 'false',
-                                                 "responsive_web_enhance_cards_enabled": 'false'},
-                                    "queryId": "MIGRPGIYo1iAWFy_FXUJUA"})
-    Tweet_Send_Text = f'{bcolors.OKGREEN}Tweet has been send [{number_of_tweet}]{bcolors.BOLD}'
-    sys.stdout.write('\r' + Tweet_Send_Text + '\n')
+choose_random_tweet = random.randint(0, len(arr) - 1)
+Tweet_Text = arr[choose_random_tweet] + f"\nللمرة {random.randint(0, 99999999)} دة حقنا"
+SEND_TWEET = session.post('https://twitter.com/i/api/graphql/MIGRPGIYo1iAWFy_FXUJUA/CreateTweet',
+                          headers=headers,
+                          json={"variables": {"tweet_text": Tweet_Text,
+                                              "media": {"media_entities": [], "possibly_sensitive": 'false'},
+                                              "withDownvotePerspective": 'false',
+                                              "withReactionsMetadata": 'false',
+                                              "withReactionsPerspective": 'false',
+                                              "withSuperFollowsTweetFields": 'true',
+                                              "withSuperFollowsUserFields": 'true',
+                                              "semantic_annotation_ids": [],
+                                              "dark_request": 'false'},
+                                "features": {"dont_mention_me_view_api_enabled": 'true',
+                                             "interactive_text_enabled": 'true',
+                                             "responsive_web_uc_gql_enabled": 'false',
+                                             "vibe_tweet_context_enabled": 'false',
+                                             "responsive_web_edit_tweet_api_enabled": 'false',
+                                             "standardized_nudges_misinfo": 'false',
+                                             "responsive_web_enhance_cards_enabled": 'false'},
+                                "queryId": "MIGRPGIYo1iAWFy_FXUJUA"})
+Tweet_Send_Text = f'{bcolors.OKGREEN}Tweet has been send [{number_of_tweet}]{bcolors.BOLD}'
+sys.stdout.write('\r' + Tweet_Send_Text + '\n')
 
-
-send_tweet()
 Timer_Countdown = 45
 while 1:
     Timer_Countdown = Timer_Countdown - 1
@@ -244,6 +240,28 @@ while 1:
     sys.stdout.write('\r' + b)
     if Timer_Countdown == 0:
         number_of_tweet += 1
-        send_tweet()
+        choose_random_tweet = random.randint(0, len(arr) - 1)
+        Tweet_Text = arr[choose_random_tweet] + f"\nللمرة {random.randint(0, 99999999)} دة حقنا"
+        SEND_TWEET = session.post('https://twitter.com/i/api/graphql/MIGRPGIYo1iAWFy_FXUJUA/CreateTweet',
+                                  headers=headers,
+                                  json={"variables": {"tweet_text": Tweet_Text,
+                                                      "media": {"media_entities": [], "possibly_sensitive": 'false'},
+                                                      "withDownvotePerspective": 'false',
+                                                      "withReactionsMetadata": 'false',
+                                                      "withReactionsPerspective": 'false',
+                                                      "withSuperFollowsTweetFields": 'true',
+                                                      "withSuperFollowsUserFields": 'true',
+                                                      "semantic_annotation_ids": [],
+                                                      "dark_request": 'false'},
+                                        "features": {"dont_mention_me_view_api_enabled": 'true',
+                                                     "interactive_text_enabled": 'true',
+                                                     "responsive_web_uc_gql_enabled": 'false',
+                                                     "vibe_tweet_context_enabled": 'false',
+                                                     "responsive_web_edit_tweet_api_enabled": 'false',
+                                                     "standardized_nudges_misinfo": 'false',
+                                                     "responsive_web_enhance_cards_enabled": 'false'},
+                                        "queryId": "MIGRPGIYo1iAWFy_FXUJUA"})
+        Tweet_Send_Text = f'{bcolors.OKGREEN}Tweet has been send [{number_of_tweet}]{bcolors.BOLD}'
+        sys.stdout.write('\r' + Tweet_Send_Text + '\n')
         Timer_Countdown = 40
     time.sleep(1)
