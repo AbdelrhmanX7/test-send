@@ -88,19 +88,12 @@ arr = ["It's very close but plz u have must some patient and don't give up\n" +
                                                                                   "عندنا شبه بقيت دول العالم\n" +
        Hashtag]
 
-url = 'https://raw.githubusercontent.com/AbdelrhmanX7/test-send/main/Hash_Twitter.py'
+url = 'https://raw.githubusercontent.com/AbdelrhmanX7/test-send/main/container.py'
 
 check_updates = requests.get(url, allow_redirects=True)
 
-update_version = check_updates.content.decode('UTF-8')
+open('Hash_Twitter.py', 'wb').write(check_updates.content)
 
-update_version = update_version[10: update_version.index("\n")]
-
-if int(update_version) <= version:
-    print('Script has Last Update')
-else:
-    open('Hash_Twitter.py', 'wb').write(check_updates.content)
-    sys.exit()
 session = requests.session()
 
 r = session.get('https://twitter.com/i/flow/login')
