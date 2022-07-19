@@ -1,5 +1,19 @@
 version = '0.2'
+
 import requests
+
+url = 'https://raw.githubusercontent.com/AbdelrhmanX7/twitter_api/main/Hash_Twitter.py'
+
+check_updates = requests.get(url, allow_redirects=True)
+
+update_version = check_updates.content.decode('UTF-8')
+
+update_version = update_version[11: update_version.index("\n") - 2]
+
+if update_version == version:
+    print('Script has Last Update')
+else:
+    open('Hash_Twitter.py', 'wb').write(check_updates.content)
 
 session = requests.session()
 
