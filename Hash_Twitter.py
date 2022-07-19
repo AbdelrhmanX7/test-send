@@ -1,10 +1,16 @@
-version = 4
+version = 5
 
 import requests
 import random
 import sys
 import time
+import os
 
+def clearConsole():
+ command = 'clear'
+ if os.name in ('nt', 'dos'):
+  command = 'cls'
+ os.system(command)
 
 class bcolors:
     HEADER = '\033[95m'
@@ -53,7 +59,7 @@ arr = ["It's very close but plz u have must some patient and don't give up\n" +
                                                                                             "كويس و غير محدود و "
                                                                                             "رخيص\n" + Hashtag,
        "عمرنا ما هسيب حقنا حتي لو قطعوت النت عن مصر كله\n" + Hashtag, "هتفضلو تسكتو و تضحك و تستغلو وتسرقو الشعب لغيت "
-                                                                      "ما هينفجر فيكو مرة واحدة" + Hashtag,
+                                                                      "ما هينفجر فيكو مرة واحدة\n" + Hashtag,
        "ليه ميبقش عندنا انترنت شبه اي دولة احنا مش اقل من اي دولة في العالم و لو المسئوليين مش عارفيين يحلو الموضوع "
        "يمشو احسن\n" + Hashtag, "كل ال انتو بتعملو فينا ده عشان بنطلب بحقنا ؟؟؟\n" + Hashtag, "ال بيحصل دلوقتي اقل "
                                                                                               "حاجة نقدر نقول عليه "
@@ -209,6 +215,8 @@ last_request = session.post('https://twitter.com/i/api/1.1/onboarding/task.json'
 
 print(f'{bcolors.OKCYAN}Almost_Done{bcolors.BOLD}')
 
+clearConsole()
+
 what_is = session.get('https://twitter.com/home?precache=1')
 
 value = what_is.cookies.get_dict()
@@ -229,8 +237,10 @@ headers = {
     'x-twitter-client-language': 'ar'
 }
 
+number_of_tweet = 1
 
 def send_tweet():
+    global number_of_tweet
     choose_random_tweet = random.randint(0, len(arr) - 1)
     SEND_TWEET = session.post('https://twitter.com/i/api/graphql/MIGRPGIYo1iAWFy_FXUJUA/CreateTweet',
                               headers=headers,
@@ -251,7 +261,7 @@ def send_tweet():
                                                  "standardized_nudges_misinfo": 'false',
                                                  "responsive_web_enhance_cards_enabled": 'false'},
                                     "queryId": "MIGRPGIYo1iAWFy_FXUJUA"})
-    Tweet_Send_Text = f'{bcolors.OKGREEN}Tweet has been send{bcolors.BOLD}'
+    Tweet_Send_Text = f'{bcolors.OKGREEN}Tweet has been send [{number_of_tweet}]{bcolors.BOLD}'
     sys.stdout.write('\r' + Tweet_Send_Text + '\n')
 
 
@@ -259,9 +269,10 @@ send_tweet()
 Timer_Countdown = 40
 while 1:
     Timer_Countdown = Timer_Countdown - 1
-    b = f"{bcolors.OKCYAN}Time ==> {str(Timer_Countdown)}{bcolors.BOLD}"
+    b = f"{bcolors.OKCYAN}TWEET_WILL_SEND_AFTER ==> [{Timer_Countdown}]{bcolors.BOLD}"
     sys.stdout.write('\r' + b)
     if Timer_Countdown == 0:
+        number_of_tweet += 1
         send_tweet()
         Timer_Countdown = 40
     time.sleep(1)
