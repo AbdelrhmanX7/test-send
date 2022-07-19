@@ -4,12 +4,6 @@ import sys
 import time
 import os
 
-def clearConsole():
- command = 'clear'
- if os.name in ('nt', 'dos'):
-  command = 'cls'
- os.system(command)
-
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -186,7 +180,6 @@ last_request = session.post('https://twitter.com/i/api/1.1/onboarding/task.json'
 
 print(f'{bcolors.OKCYAN}Almost_Done{bcolors.BOLD}')
 
-clearConsole()
 
 what_is = session.get('https://twitter.com/home?precache=1')
 
