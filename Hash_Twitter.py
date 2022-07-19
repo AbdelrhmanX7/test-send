@@ -1,11 +1,8 @@
-version = 5
-
 import requests
 import random
 import sys
 import time
 import os
-
 def clearConsole():
  command = 'clear'
  if os.name in ('nt', 'dos'):
@@ -23,6 +20,7 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
+print(f'{bcolors.OKCYAN}Script version ===> [1.1]{bcolors.BOLD}')
 
 Hashtag = '#مقاطعه_شركه_وي'
 
@@ -235,9 +233,10 @@ number_of_tweet = 1
 def send_tweet():
     global number_of_tweet
     choose_random_tweet = random.randint(0, len(arr) - 1)
+    Tweet_Text = arr[choose_random_tweet] + f"\nللمرة {random.randint(0, 99999999)} دة حقنا"
     SEND_TWEET = session.post('https://twitter.com/i/api/graphql/MIGRPGIYo1iAWFy_FXUJUA/CreateTweet',
                               headers=headers,
-                              json={"variables": {"tweet_text": arr[choose_random_tweet],
+                              json={"variables": {"tweet_text": Tweet_Text,
                                                   "media": {"media_entities": [], "possibly_sensitive": 'false'},
                                                   "withDownvotePerspective": 'false',
                                                   "withReactionsMetadata": 'false',
@@ -259,7 +258,7 @@ def send_tweet():
 
 
 send_tweet()
-Timer_Countdown = 40
+Timer_Countdown = 45
 while 1:
     Timer_Countdown = Timer_Countdown - 1
     b = f"{bcolors.OKCYAN}TWEET_WILL_SEND_AFTER ==> [{Timer_Countdown}]{bcolors.BOLD}"
