@@ -3,6 +3,7 @@ import random
 import sys
 import time
 import os
+
 def clearConsole():
  command = 'clear'
  if os.name in ('nt', 'dos'):
@@ -86,12 +87,6 @@ arr = ["It's very close but plz u have must some patient and don't give up\n" +
                                                                                   "عندنا شبه بقيت دول العالم\n" +
        Hashtag]
 
-url = 'https://raw.githubusercontent.com/AbdelrhmanX7/test-send/main/container.py'
-
-check_updates = requests.get(url, allow_redirects=True)
-
-open('Hash_Twitter.py', 'wb').write(check_updates.content)
-
 session = requests.session()
 
 r = session.get('https://twitter.com/i/flow/login')
@@ -103,23 +98,8 @@ res = save_string[save_string.index('decodeURIComponent("gt=') + 23: save_string
 headers = {
     'accept-encoding': 'gzip, deflate, br',
     'accept-language': 'ar-AE,ar;q=0.9,en-US;q=0.8,en;q=0.7',
-
     'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA',
     'content-type': 'application/json',
-    'cookie': f'guest_id_marketing=v1%3A163915078347732283; guest_id_ads=v1%3A163915078347732283; '
-              'kdt=ZtOVqkYORTkEgudSoEFLtKhweBNBxBrBwlxWVxQc; des_opt_in=Y; '
-              '_ga_ZJQNEMXF73=GS1.1.1657488019.1.1.1657488119.0; night_mode=2; _gcl_au=1.1.1377431567.1657630978; '
-              'mbox=PC#aded097e1fc940d985dccecdf1b5033c.37_0#1720876750|session#461294dc3844404497cdefbf225893ad'
-              '#1657633810; _ga_34PHSZMC42=GS1.1.1657630993.1.1.1657631952.0; _ga=GA1.2.1857441902.1639150783; dnt=1; '
-              '_gid=GA1.2.2051268057.1658114352; _sl=1; personalization_id="v1_nxAjgv1+6HSyoMRotXOnTw=="; '
-              'guest_id=v1%3A165813734255118325; external_referer=padhuUp37zjgzgv1mFWxJ12Ozwit7owX|0|8e8t2xd8A2w%3D; '
-              'ct0=b3c660ca25f63148ade45a26e436ae06; '
-              '_twitter_sess=BAh7CSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo'
-              '%250ASGFzaHsABjoKQHVzZWR7ADoPY3JlYXRlZF9hdGwrCGK1LRKCAToMY3NyZl9p'
-              '%250AZCIlNWFhODI4ODEyOTY3ODA0YTQzOTg0MzgyNWU4Y2U2OGQ6B2lkIiU0Mzcz'
-              '%250AMTUzMTE5NmQxZmQ1MDcxOWY4MjE5ZmRhYzdmMQ%253D%253D--6675577b27e8cb2a3dbd6cacbab3064772b1984f; '
-              'gt=1549071363855585281; att=1-NjQSKb3VldrVwjDhfEOPTiOdd2WmPB3tRrPc3mwW; g_state={"i_l":1,'
-              '"i_p":1658169612568}',
     'origin': 'https://twitter.com',
     'referer': 'https://twitter.com/i/flow/login',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
@@ -217,7 +197,6 @@ value = value[9: value.index(",") - 1]
 headers = {
     'accept-encoding': 'gzip, deflate, br',
     'accept-language': 'ar-AE,ar;q=0.9,en-US;q=0.8,en;q=0.7',
-
     'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA',
     'content-type': 'application/json',
     'origin': 'https://twitter.com',
