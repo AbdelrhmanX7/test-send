@@ -21,7 +21,7 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-print(f'{bcolors.OKCYAN}Script version ===> [1.1]{bcolors.BOLD}')
+print(f'{bcolors.OKCYAN}Script version ===> [1.2]{bcolors.BOLD}')
 
 Hashtag = '#مقاطعه_شركه_وي'
 
