@@ -23,9 +23,11 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-print(f'{bcolors.OKCYAN}Script version ===> [1.2]{bcolors.BOLD}')
+print(f'{bcolors.OKCYAN}Script version ===> [1.3]{bcolors.BOLD}')
 
 Hashtag = '#انترنت_بلا_حدود_ف_مصر_مقاطعه_وي'
+
+print(Hashtag)
 
 arr = ["It's very close but plz u have must some patient and don't give up\n" +
        Hashtag, "It's very close but plz u have must some patient and don't give up\n" + Hashtag, "I am sure very "
