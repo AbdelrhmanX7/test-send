@@ -4,8 +4,8 @@ import sys
 import time
 import os
 
-print('احب اشكر الاخ Hamed')
-print('و مروان رجل جدع')
+
+
 def clearConsole():
  command = 'clear'
  if os.name in ('nt', 'dos'):
