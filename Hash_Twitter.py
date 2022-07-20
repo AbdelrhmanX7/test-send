@@ -4,7 +4,8 @@ import sys
 import time
 import os
 
-
+print('we do some updates right now #Work_Manual')
+sys.exit()
 
 def clearConsole():
  command = 'clear'
