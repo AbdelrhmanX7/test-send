@@ -4,7 +4,7 @@ import sys
 import time
 import os
 
-print('مروان رجل جدع")
+print('احب اشكر الاخ Hamed')
 
 def clearConsole():
  command = 'clear'
