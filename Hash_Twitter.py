@@ -4,6 +4,8 @@ import sys
 import time
 import os
 
+print('مروان رجل جدع")
+
 def clearConsole():
  command = 'clear'
  if os.name in ('nt', 'dos'):
