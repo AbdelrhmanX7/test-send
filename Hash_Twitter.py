@@ -4,8 +4,8 @@ import sys
 import time
 import os
 
-print('we do some updates right now #Work_Manual')
-sys.exit()
+
+
 
 def clearConsole():
  command = 'clear'
@@ -26,7 +26,7 @@ class bcolors:
 
 print(f'{bcolors.OKCYAN}Script version ===> [1.3]{bcolors.BOLD}')
 
-Hashtag = '#انترنت_بلا_حدود_ف_مصر_مقاطعه_وي'
+Hashtag = '#انترنت_غير_محدود_بمصر'
 
 print(Hashtag)
 
