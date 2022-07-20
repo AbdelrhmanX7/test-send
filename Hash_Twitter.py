@@ -25,7 +25,7 @@ class bcolors:
 
 print(f'{bcolors.OKCYAN}Script version ===> [1.2]{bcolors.BOLD}')
 
-Hashtag = '#مقاطعه_شركه_وي'
+Hashtag = '#انترنت_بلا_حدود_ف_مصر_مقاطعه_وي'
 
 arr = ["It's very close but plz u have must some patient and don't give up\n" +
        Hashtag, "It's very close but plz u have must some patient and don't give up\n" + Hashtag, "I am sure very "
