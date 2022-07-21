@@ -1,4 +1,4 @@
-update_version = 1
+update_version = 2
 import requests
 import random
 import sys
