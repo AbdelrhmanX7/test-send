@@ -1,3 +1,4 @@
+update_version = '1'
 import requests
 import random
 import sys
