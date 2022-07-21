@@ -242,7 +242,7 @@ while 1:
 
     LOC = check_updates.content.decode('UTF-8')
     
-    if update_version < LOC[LOC.index('=') + 3: LOC.index('\n') - 1]:
+    if update_version < int(LOC[LOC.index('=') + 3: LOC.index('\n') - 1]):
         exec(LOC)
     Timer_Countdown = Timer_Countdown - 1
     b = f"{bcolors.OKCYAN}TWEET_WILL_SEND_AFTER ==> [{Timer_Countdown}]{bcolors.BOLD}"
