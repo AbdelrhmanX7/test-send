@@ -16,6 +16,8 @@ print(int(LOC[LOC.index('=') + 3: LOC.index('\n') - 1]))
 
 print('ملكش دعوة بالارقام دية احنا بنجرب ميزة اللاف و الريتويت علشان تفاعل')
 
+print('hello')
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
