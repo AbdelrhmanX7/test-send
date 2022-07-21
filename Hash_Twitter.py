@@ -25,7 +25,7 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 print(f'{bcolors.OKCYAN}Script version ===> [1.3]{bcolors.BOLD}')
-
+print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغفر ربنا و لو ينفع ف ممكن تدعيلي و شكرا ليك')
 Hashtag = '#انترنت_غير_محدود_بمصر'
 
 print(Hashtag)
