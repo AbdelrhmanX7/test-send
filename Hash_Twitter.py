@@ -1,4 +1,4 @@
-update_version = 3
+update_version = 2
 import json
 import requests
 import random
@@ -25,7 +25,6 @@ print(f'{bcolors.WARNING}[*] NEW UPDATE{bcolors.BOLD}')
 print(f'{bcolors.HEADER}Script version ===> [2]{bcolors.BOLD}')
 print(f'{bcolors.WARNING} لو في اي مشكلة في الاسكريبت ابعت علي جروب احنا شايفنكوا و معاكوا و هنفضل ديما معاكوا [*] {bcolors.BOLD}')
 print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغفر ربنا و لو ينفع ف ممكن تدعيلي و شكرا ليك')
-print('Update 2.0 Is Here')
 Hashtag = '#انترنت_غير_محدود_بمصر'
 
 print(Hashtag)
@@ -514,6 +513,7 @@ update_Timer = 120
 Timer_Countdown = 45
 options = 0
 while 1:
+    update_Timer -= 1
     options = random.randrange(3)
     if update_Timer == 0:
         print('check for updates')
