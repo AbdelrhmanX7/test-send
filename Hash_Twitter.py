@@ -446,6 +446,7 @@ os.system(command)
 print(f'{bcolors.OKGREEN}[*]ALL THINGS IS GOOD ===> SCRIPT WILL START NOW{bcolors.BOLD}')
 headers = {
     'accept-language': 'ar-AE,ar;q=0.9,en-US;q=0.8,en;q=0.7',
+    'accept': 'application/json',
     'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs'
                      '%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA',
     'content-type': 'application/json',
