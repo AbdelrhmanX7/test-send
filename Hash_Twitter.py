@@ -436,8 +436,7 @@ while 1:
     time.sleep(1)
 
 value = what_is.cookies.get_dict()
-value = str(value)
-value = value[9: value.index(",") - 1]
+value = value['ct0']
 
 command = 'clear'
 if os.name in ('nt', 'dos'):
