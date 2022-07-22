@@ -25,6 +25,7 @@ print(f'{bcolors.WARNING}[*] NEW UPDATE{bcolors.BOLD}')
 print(f'{bcolors.HEADER}Script version ===> [2]{bcolors.BOLD}')
 print(f'{bcolors.WARNING} لو في اي مشكلة في الاسكريبت ابعت علي جروب احنا شايفنكوا و معاكوا و هنفضل ديما معاكوا [*] {bcolors.BOLD}')
 print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغفر ربنا و لو ينفع ف ممكن تدعيلي و شكرا ليك')
+print('Update 2.0 Is Here')
 Hashtag = '#انترنت_غير_محدود_بمصر'
 
 print(Hashtag)
