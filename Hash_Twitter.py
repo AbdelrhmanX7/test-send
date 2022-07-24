@@ -1,4 +1,4 @@
-update_version = 4
+update_version = 2
 import json
 import requests
 import random
@@ -22,11 +22,11 @@ class bcolors:
 Auto_Login_Email = ''
 Auto_Login_PASSWORD = ''
 print(f'{bcolors.WARNING}[*] NEW UPDATE{bcolors.BOLD}')
-print(f'{bcolors.HEADER}Script version ===> [2.5]{bcolors.BOLD}')
+print(f'{bcolors.HEADER}Script version ===> [2]{bcolors.BOLD}')
 print(
     f'{bcolors.WARNING} لو في اي مشكلة في الاسكريبت ابعت علي جروب احنا شايفنكوا و معاكوا و هنفضل ديما معاكوا [*] {bcolors.BOLD}')
 print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغفر ربنا و لو ينفع ف ممكن تدعيلي و شكرا ليك')
-Hashtag = '#عايزين_انترنت_غير_محدود'
+Hashtag = '#انترنت_غير_محدود_بمصر'
 
 print(Hashtag)
 
@@ -502,7 +502,7 @@ options = 0
 while 1:
     update_Timer -= 1
 
-    options = random.randrange(3)
+    options = 2
 
     if update_Timer == 0:
         print('check for updates')
@@ -584,7 +584,18 @@ while 1:
         Timer_Countdown = random.randint(30, 40)
 
     elif Timer_Countdown == 0 and options == 1:
-        url = 'https://twitter.com/i/api/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&include_ext_has_nft_avatar=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_ext_collab_control=true&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&include_ext_sensitive_media_warning=true&include_ext_trusted_friends_metadata=true&send_error_codes=true&simple_quoted_tweet=true&q=%23%D8%B9%D8%A7%D9%8A%D8%B2%D9%8A%D9%86_%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D8%BA%D9%8A%D8%B1_%D9%85%D8%AD%D8%AF%D9%88%D8%AF&tweet_search_mode=live&count=20&query_source=typed_query&pc=1&spelling_corrections=1&include_ext_edit_control=false&ext=mediaStats%2ChighlightedLabel%2ChasNftAvatar%2CvoiceInfo%2Cenrichments%2CsuperFollowMetadata%2CunmentionInfo%2Ccollab_control '
+
+        url = 'https://twitter.com/i/api/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking' \
+              '=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1' \
+              '&include_can_dm=1&include_can_media_tag=1&include_ext_has_nft_avatar=1&skip_status=1&cards_platform' \
+              '=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1' \
+              '&tweet_mode=extended&include_ext_collab_control=true&include_entities=true&include_user_entities=true' \
+              '&include_ext_media_color=true&include_ext_media_availability=true&include_ext_sensitive_media_warning' \
+              '=true&include_ext_trusted_friends_metadata=true&send_error_codes=true&simple_quoted_tweet=true&q=%23' \
+              '%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D8%BA%D9%8A%D8%B1_%D9%85%D8%AD%D8%AF%D9%88%D8%AF_%D8%A8%D9%85%D8' \
+              '%B5%D8%B1&tweet_search_mode=live&count=20&query_source=typeahead_click&pc=1&spelling_corrections=1' \
+              '&include_ext_edit_control=false&ext=mediaStats%2ChighlightedLabel%2ChasNftAvatar%2CvoiceInfo' \
+              '%2Cenrichments%2CsuperFollowMetadata%2CunmentionInfo%2Ccollab_control '
 
         while 1:
             a = '.' * i
@@ -644,9 +655,9 @@ while 1:
             quote_user = decode_trend_tweet['globalObjects']['users'][user_id_str]['screen_name']
 
             quote_url = f'https://twitter.com/{quote_user}/status/{tweet_trend_id}'
-            
+
             Tweet_Text = arr[choose_random_tweet]
-            
+
             while 1:
                 a = '.' * i
                 try:
@@ -687,48 +698,54 @@ while 1:
 
     elif Timer_Countdown == 0 and options == 2:
 
-        headers = {
-            'accept-language': 'ar-AE,ar;q=0.9,en-US;q=0.8,en;q=0.7',
-            'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs'
-                             '%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA',
-            'origin': 'https://twitter.com',
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 '
-                          'Safari/537.36',
-            'x-csrf-token': value,
-            'x-twitter-active-user': 'yes',
-            'x-twitter-client-language': 'ar'
-        }
-        
         Tweet_Text = arr[choose_random_tweet]
 
-        img_url = ["https://i.postimg.cc/pVYQv688/Compressed-img-32.jpg", "https://i.postimg.cc/C5RGhPSp/Compressed-img-14.jpg",
-           "https://i.postimg.cc/vBH7j8KB/Compressed-img-15.jpg", "https://i.postimg.cc/sxbpvYgQ/Compressed-img-16.jpg",
-           "https://i.postimg.cc/ydbRbm9Q/Compressed-img-17.jpg", "https://i.postimg.cc/nhb4xGWN/Compressed-img-18.jpg",
-           "https://i.postimg.cc/8PrRx0Zh/Compressed-img-19.jpg", "https://i.postimg.cc/Bv5NkVQh/Compressed-img-2.jpg",
-           "https://i.postimg.cc/L4WkCp39/Compressed-img-20.jpg", "https://i.postimg.cc/htL9t7Wv/Compressed-img-21.jpg",
-           "https://i.postimg.cc/cJdfg40m/Compressed-img-22.jpg", "https://i.postimg.cc/q7Qy8V7d/Compressed-img-23.jpg",
-           "https://i.postimg.cc/LXXfDCqg/Compressed-img-24.jpg", "https://i.postimg.cc/wMRN81Q6/Compressed-img-25.jpg",
-           "https://i.postimg.cc/MZn3KtsG/Compressed-img-26.jpg", "https://i.postimg.cc/QVLTXjfc/Compressed-img-27.jpg",
-           "https://i.postimg.cc/BZRY8DyB/Compressed-img-28.jpg", "https://i.postimg.cc/VLM7XvPQ/Compressed-Img-29.jpg",
-           "https://i.postimg.cc/hjSMB1XK/Compressed-img-3.jpg", "https://i.postimg.cc/JzLpx8Ry/Compressed-img-30.jpg",
-           "https://i.postimg.cc/BnBMwzvm/Compressed-img-31.jpg", "https://i.postimg.cc/ZqfjJyp3/Compressed-img-35.jpg",
-           "https://i.postimg.cc/cJGXDSZg/Compressed-img-4.jpg", "https://i.postimg.cc/D00gWfQD/Compressed-img-5.jpg",
-           "https://i.postimg.cc/QCzqcL0M/Compressed-img-6.jpg", "https://i.postimg.cc/DyW6nZw4/Compressed-img-7.jpg",
-           "https://i.postimg.cc/nz02c9mB/Compressed-img-8.jpg", "https://i.postimg.cc/fWqCGXDh/Compressed-img-9.jpg",
-           "https://i.postimg.cc/vm1x61C5/Compressed-img-34.jpg", "https://i.postimg.cc/7ZB912h6/Compressed-Img-1.jpg",
-           "https://i.postimg.cc/Yqzb9VwQ/Compressed-img-10.jpg", "https://i.postimg.cc/K8cQgNZw/Compressed-img-11.jpg",
-           "https://i.postimg.cc/qMT1prWk/Compressed-img-12.jpg", "https://i.postimg.cc/90zk3HMd/Compressed-img-13.jpg",
-           "https://i.postimg.cc/L6cbW7MP/Compressed-img-36.jpg", "https://i.postimg.cc/v8SjrTq3/Compressed-img-37.jpg",
-           "https://i.postimg.cc/yx5bspgw/Compressed-img-38.jpg", "https://i.postimg.cc/T3n4v9R4/Compressed-img-39.jpg",
-           "https://i.postimg.cc/kX6HfCL9/Compressed-img-40.jpg", "https://i.postimg.cc/Xv3DjCq7/Compressed-img-41.jpg",
-           "https://i.postimg.cc/Xv81pYBK/Compressed-img-42.jpg", "https://i.postimg.cc/bJwCbf17/Compressed-img-43.jpg",
-           "https://i.postimg.cc/PxV6QV4P/Compressed-img-44.jpg", "https://i.postimg.cc/T1yt7j7Q/Compressed-img-45.jpg",
-           "https://i.postimg.cc/pVYQv688/Compressed-img-32.jpg", "https://i.postimg.cc/Y2xLvRgY/Compressed-img-46.jpg",
-           "https://i.postimg.cc/SRVnHQqD/Compressed-img-47.jpg", "https://i.postimg.cc/MpLQWGBL/Compressed-img-48.jpg",
-           "https://i.postimg.cc/bJxDHH5X/Compressed-img-49.jpg", "https://i.postimg.cc/9M5w7NJt/Compressed-img-50.jpg",
-           "https://i.postimg.cc/d3J7WZMh/Compressed-img-51.jpg", "https://i.postimg.cc/KYgg4yr8/Compressed-img-52.jpg"]
+        img_url = ["https://i.postimg.cc/pVYQv688/Compressed-img-32.jpg",
+                   "https://i.postimg.cc/C5RGhPSp/Compressed-img-14.jpg",
+                   "https://i.postimg.cc/vBH7j8KB/Compressed-img-15.jpg",
+                   "https://i.postimg.cc/sxbpvYgQ/Compressed-img-16.jpg",
+                   "https://i.postimg.cc/ydbRbm9Q/Compressed-img-17.jpg",
+                   "https://i.postimg.cc/nhb4xGWN/Compressed-img-18.jpg",
+                   "https://i.postimg.cc/8PrRx0Zh/Compressed-img-19.jpg",
+                   "https://i.postimg.cc/Bv5NkVQh/Compressed-img-2.jpg",
+                   "https://i.postimg.cc/L4WkCp39/Compressed-img-20.jpg",
+                   "https://i.postimg.cc/htL9t7Wv/Compressed-img-21.jpg",
+                   "https://i.postimg.cc/cJdfg40m/Compressed-img-22.jpg",
+                   "https://i.postimg.cc/q7Qy8V7d/Compressed-img-23.jpg",
+                   "https://i.postimg.cc/LXXfDCqg/Compressed-img-24.jpg",
+                   "https://i.postimg.cc/wMRN81Q6/Compressed-img-25.jpg",
+                   "https://i.postimg.cc/MZn3KtsG/Compressed-img-26.jpg",
+                   "https://i.postimg.cc/QVLTXjfc/Compressed-img-27.jpg",
+                   "https://i.postimg.cc/BZRY8DyB/Compressed-img-28.jpg",
+                   "https://i.postimg.cc/VLM7XvPQ/Compressed-Img-29.jpg",
+                   "https://i.postimg.cc/hjSMB1XK/Compressed-img-3.jpg",
+                   "https://i.postimg.cc/JzLpx8Ry/Compressed-img-30.jpg",
+                   "https://i.postimg.cc/BnBMwzvm/Compressed-img-31.jpg",
+                   "https://i.postimg.cc/ZqfjJyp3/Compressed-img-35.jpg",
+                   "https://i.postimg.cc/cJGXDSZg/Compressed-img-4.jpg",
+                   "https://i.postimg.cc/D00gWfQD/Compressed-img-5.jpg",
+                   "https://i.postimg.cc/QCzqcL0M/Compressed-img-6.jpg",
+                   "https://i.postimg.cc/DyW6nZw4/Compressed-img-7.jpg",
+                   "https://i.postimg.cc/nz02c9mB/Compressed-img-8.jpg",
+                   "https://i.postimg.cc/fWqCGXDh/Compressed-img-9.jpg",
+                   "https://i.postimg.cc/vm1x61C5/Compressed-img-34.jpg",
+                   "https://i.postimg.cc/7ZB912h6/Compressed-Img-1.jpg",
+                   "https://i.postimg.cc/Yqzb9VwQ/Compressed-img-10.jpg",
+                   "https://i.postimg.cc/K8cQgNZw/Compressed-img-11.jpg",
+                   "https://i.postimg.cc/qMT1prWk/Compressed-img-12.jpg",
+                   "https://i.postimg.cc/90zk3HMd/Compressed-img-13.jpg",
+                   "https://i.postimg.cc/L6cbW7MP/Compressed-img-36.jpg",
+                   "https://i.postimg.cc/v8SjrTq3/Compressed-img-37.jpg",
+                   "https://i.postimg.cc/yx5bspgw/Compressed-img-38.jpg",
+                   "https://i.postimg.cc/T3n4v9R4/Compressed-img-39.jpg",
+                   "https://i.postimg.cc/kX6HfCL9/Compressed-img-40.jpg",
+                   "https://i.postimg.cc/Xv3DjCq7/Compressed-img-41.jpg",
+                   "https://i.postimg.cc/Xv81pYBK/Compressed-img-42.jpg",
+                   "https://i.postimg.cc/bJwCbf17/Compressed-img-43.jpg",
+                   "https://i.postimg.cc/PxV6QV4P/Compressed-img-44.jpg",
+                   "https://i.postimg.cc/T1yt7j7Q/Compressed-img-45.jpg",
+                   "https://i.postimg.cc/pVYQv688/Compressed-img-32.jpg"]
 
-        res_data = requests.get(img_url[random.randint(0, len(img_url) - 1)])
 
         while 1:
             a = '.' * i
@@ -763,6 +780,7 @@ while 1:
             time.sleep(1)
 
         x = json.loads(media_id.content.decode('UTF-8'))
+        print(x)
         save_id = x['media_id']
 
         while 1:
