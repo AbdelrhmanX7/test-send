@@ -695,6 +695,18 @@ while 1:
 
     elif Timer_Countdown == 0 and options == 2:
 
+        headers = {
+            'accept-language': 'ar-AE,ar;q=0.9,en-US;q=0.8,en;q=0.7',
+            'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs'
+                             '%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA',
+            'origin': 'https://twitter.com',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 '
+                          'Safari/537.36',
+            'x-csrf-token': value,
+            'x-twitter-active-user': 'yes',
+            'x-twitter-client-language': 'ar'
+        }
+        
         Tweet_Text = arr[choose_random_tweet]
 
         img_url = ["https://i.postimg.cc/pVYQv688/Compressed-img-32.jpg",
