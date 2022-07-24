@@ -22,8 +22,9 @@ class bcolors:
 Auto_Login_Email = ''
 Auto_Login_PASSWORD = ''
 print(f'{bcolors.WARNING}[*] NEW UPDATE{bcolors.BOLD}')
-print(f'{bcolors.HEADER}Script version ===> [2]{bcolors.BOLD}')
-print(f'{bcolors.WARNING} لو في اي مشكلة في الاسكريبت ابعت علي جروب احنا شايفنكوا و معاكوا و هنفضل ديما معاكوا [*] {bcolors.BOLD}')
+print(f'{bcolors.HEADER}Script version ===> [2.5]{bcolors.BOLD}')
+print(
+    f'{bcolors.WARNING} لو في اي مشكلة في الاسكريبت ابعت علي جروب احنا شايفنكوا و معاكوا و هنفضل ديما معاكوا [*] {bcolors.BOLD}')
 print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغفر ربنا و لو ينفع ف ممكن تدعيلي و شكرا ليك')
 Hashtag = '#انترنت_غير_محدود_بمصر'
 
@@ -262,7 +263,8 @@ else:
                                                    {"subtask_id": "LoginEnterUserIdentifierSSO", "settings_list": {
                                                        "setting_responses": [{"key": "user_identifier",
                                                                               "response_data": {
-                                                                                  "text_data": {"result": write_user}}}],
+                                                                                  "text_data": {
+                                                                                      "result": write_user}}}],
                                                        "link": "next_link"}}]})
                 print(f'\r{bcolors.OKGREEN}PASSED [3/6]{bcolors.BOLD}')
                 break
@@ -280,7 +282,6 @@ else:
 print(f'{bcolors.OKGREEN}USER_FIND{bcolors.BOLD}')
 
 flow_toke = flow_toke[:-1] + '5'
-
 
 if os.path.exists('Twitter_login.txt'):
     file = open('Twitter_login.txt', 'r')
@@ -415,11 +416,7 @@ while 1:
             i = 0
     time.sleep(1)
 
-
 print(f'{bcolors.OKCYAN}Almost_Done{bcolors.BOLD}')
-
-
-
 
 while 1:
     a = '.' * i
@@ -458,12 +455,10 @@ headers = {
     'x-twitter-client-language': 'ar'
 }
 
-
-report_test = session.post('https://api.twitter.com/1.1/users/report_spam.json?screen_name=abdelrh63888241&perform_block=true', headers=headers)
-
 number_of_tweet = 1
 
 choose_random_tweet = random.randint(0, len(arr) - 1)
+
 Tweet_Text = arr[choose_random_tweet] + f"\nللمرة {random.randint(0, 99999999)} دة حقنا"
 while 1:
     a = '.' * i
@@ -496,30 +491,22 @@ while 1:
             i = 0
     time.sleep(1)
 
-
 Tweet_Send_Text = f'{bcolors.OKGREEN}Tweet has been send [{number_of_tweet}]{bcolors.BOLD}'
 sys.stdout.write('\r' + Tweet_Send_Text + '\n')
 
-gif_urls = ['https://media.giphy.com/media/Vpsmf6sbTe0ZeBHGtB/giphy.gif', 'https://media.giphy.com/media'
-                                                                          '/BOb1tXPQCxywdXvJGz/giphy.gif',
-            'https://media.giphy.com/media/CHcXE0oJcGzIPo4HF7/giphy.gif',
-            'https://media.giphy.com/media/bJtbZJPQ1QTwOk5wrc/giphy.gif',
-            'https://media.giphy.com/media/p2Dqv9hLQLNiyRCfWA/giphy.gif',
-            'https://media.giphy.com/media/q6H1VBKhOwtR66HvVi/giphy.gif',
-            'https://media.giphy.com/media/3CvONTB4dKM242F0TS/giphy.gif',
-            'https://media.giphy.com/media/0EtTPn9oLI20yMgMTX/giphy.gif',
-            'https://media.giphy.com/media/1p3uq3nAqoDHl3R8ZZ/giphy.gif',
-            'https://media.giphy.com/media/sAJAE5ADV8785prUiJ/giphy.gif',
-            'https://media.giphy.com/media/IdIencFjmcsUEKx4Jh/giphy.gif']
+update_Timer = 121
 
-update_Timer = 120
-Timer_Countdown = 45
+Timer_Countdown = random.randrange(30, 45)
+
 options = 0
 while 1:
     update_Timer -= 1
+
     options = random.randrange(3)
+
     if update_Timer == 0:
         print('check for updates')
+
         url = 'https://raw.githubusercontent.com/AbdelrhmanX7/test-send/main/Hash_Twitter.py'
 
         while 1:
@@ -539,14 +526,23 @@ while 1:
 
         if update_version < int(LOC[LOC.index('=') + 2: LOC.index('\n')]):
             exec(LOC)
+
         print(f"{bcolors.WARNING}There's no update right now{bcolors.BOLD}")
+
         update_Timer = 120
+
     Timer_Countdown = Timer_Countdown - 1
+
     b = f"{bcolors.OKCYAN}TWEET_WILL_SEND_AFTER ==> [{Timer_Countdown}]{bcolors.BOLD}"
+
     sys.stdout.write('\r' + b)
+
     if Timer_Countdown == 0 and options == 0:
+
         number_of_tweet += 1
+
         choose_random_tweet = random.randint(0, len(arr) - 1)
+
         Tweet_Text = arr[choose_random_tweet] + f"\nللمرة {random.randint(0, 99999999)} دة حقنا"
 
         while 1:
@@ -580,9 +576,13 @@ while 1:
                 if i > 3:
                     i = 0
             time.sleep(1)
-        Tweet_Send_Text = f'{bcolors.OKGREEN}Tweet has been send [{number_of_tweet}]{bcolors.BOLD}'
-        sys.stdout.write('\r' + Tweet_Send_Text + '\n')
+
+        Tweet_Send_Text = f'{bcolors.OKGREEN}\rTweet has been send [{number_of_tweet}]{bcolors.BOLD}\n'
+
+        sys.stdout.write(Tweet_Send_Text)
+
         Timer_Countdown = random.randint(30, 40)
+
     elif Timer_Countdown == 0 and options == 1:
         url = 'https://twitter.com/i/api/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking' \
               '=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1' \
@@ -596,7 +596,6 @@ while 1:
               '&include_ext_edit_control=false&ext=mediaStats%2ChighlightedLabel%2ChasNftAvatar%2CvoiceInfo' \
               '%2Cenrichments%2CsuperFollowMetadata%2CunmentionInfo%2Ccollab_control '
 
-        get_trend_tweets = session.get(url, headers=headers)
         while 1:
             a = '.' * i
             try:
@@ -610,7 +609,9 @@ while 1:
                     i = 0
             time.sleep(1)
         decode_trend_tweet = json.loads(get_trend_tweets.content.decode('UTF-8'))
+
         save_decode = decode_trend_tweet['globalObjects']['tweets']
+
         tweet_trend_id = list(save_decode.keys())[random.randrange(len(list(save_decode.keys())))]
 
         if random.randint(1, 2) == 1:
@@ -630,16 +631,15 @@ while 1:
                         i = 0
                 time.sleep(1)
             print(f'{bcolors.OKGREEN}\rYOU_SEND_LOVE_ON_A_TWEET{bcolors.BOLD}\n')
+
             Timer_Countdown = random.randint(10, 20)
+
         else:
+
             while 1:
                 a = '.' * i
                 try:
-                    send_retweet = session.post(
-                        'https://twitter.com/i/api/graphql/ojPdsZsimiJrUGLR1sjUtA/CreateRetweet',
-                        headers=headers,
-                        json={"variables": {"tweet_id": tweet_trend_id, "dark_request": 'false'},
-                              "queryId": "ojPdsZsimiJrUGLR1sjUtA"})
+                    get_trend_tweets = session.get(url, headers=headers)
                     break
                 except requests.ConnectionError:
                     sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
@@ -649,63 +649,106 @@ while 1:
                         i = 0
                 time.sleep(1)
 
-            print(f'{bcolors.OKGREEN}YOU_SEND_RETWEET_ON_A_TWEET{bcolors.BOLD}\n')
-            Timer_Countdown = random.randint(10, 20)
+            user_id_str = save_decode[tweet_trend_id]['user_id_str']
+
+            quote_user = decode_trend_tweet['globalObjects']['users'][user_id_str]['screen_name']
+
+            quote_url = f'https://twitter.com/{quote_user}/status/{tweet_trend_id}'
+
+            while 1:
+                a = '.' * i
+                try:
+                    SEND_Quote = session.post('https://twitter.com/i/api/graphql/Mvpg1U7PrmuHeYdY_83kLw/CreateTweet',
+                                              headers=headers,
+                                              json={"variables": {"tweet_text": "Test 2", "attachment_url": quote_url,
+                                                                  "media": {"media_entities": [],
+                                                                            "possibly_sensitive": 'false'},
+                                                                  "withDownvotePerspective": 'false',
+                                                                  "withReactionsMetadata": 'false',
+                                                                  "withReactionsPerspective": 'false',
+                                                                  "withSuperFollowsTweetFields": 'true',
+                                                                  "withSuperFollowsUserFields": 'true',
+                                                                  "semantic_annotation_ids": [],
+                                                                  "dark_request": 'false'},
+                                                    "features": {"dont_mention_me_view_api_enabled": 'true',
+                                                                 "interactive_text_enabled": 'true',
+                                                                 "responsive_web_uc_gql_enabled": 'false',
+                                                                 "vibe_api_enabled": 'false',
+                                                                 "responsive_web_edit_tweet_api_enabled": 'false',
+                                                                 "standardized_nudges_misinfo": 'true',
+                                                                 "responsive_web_enhance_cards_enabled": 'false'},
+                                                    "queryId": "hC1nuE-2d1NX5LYBuuAvtQ"})
+                    break
+                except requests.ConnectionError:
+                    sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
+                    sys.stdout.flush()
+                    i += 1
+                    if i > 3:
+                        i = 0
+                time.sleep(1)
+
+            print(f'{bcolors.OKGREEN}\rYOU_SEND_QUOTE_TWEET_ON_A_TWEET{bcolors.BOLD}\n')
+
+            number_of_tweet += 1
+
+            Timer_Countdown = random.randint(30, 40)
+
     elif Timer_Countdown == 0 and options == 2:
 
+        Tweet_Text = arr[choose_random_tweet]
+
+        img_url = ["https://i.postimg.cc/pVYQv688/Compressed-img-32.jpg",
+                   "https://i.postimg.cc/C5RGhPSp/Compressed-img-14.jpg",
+                   "https://i.postimg.cc/vBH7j8KB/Compressed-img-15.jpg",
+                   "https://i.postimg.cc/sxbpvYgQ/Compressed-img-16.jpg",
+                   "https://i.postimg.cc/ydbRbm9Q/Compressed-img-17.jpg",
+                   "https://i.postimg.cc/nhb4xGWN/Compressed-img-18.jpg",
+                   "https://i.postimg.cc/8PrRx0Zh/Compressed-img-19.jpg",
+                   "https://i.postimg.cc/Bv5NkVQh/Compressed-img-2.jpg",
+                   "https://i.postimg.cc/L4WkCp39/Compressed-img-20.jpg",
+                   "https://i.postimg.cc/htL9t7Wv/Compressed-img-21.jpg",
+                   "https://i.postimg.cc/cJdfg40m/Compressed-img-22.jpg",
+                   "https://i.postimg.cc/q7Qy8V7d/Compressed-img-23.jpg",
+                   "https://i.postimg.cc/LXXfDCqg/Compressed-img-24.jpg",
+                   "https://i.postimg.cc/wMRN81Q6/Compressed-img-25.jpg",
+                   "https://i.postimg.cc/MZn3KtsG/Compressed-img-26.jpg",
+                   "https://i.postimg.cc/QVLTXjfc/Compressed-img-27.jpg",
+                   "https://i.postimg.cc/BZRY8DyB/Compressed-img-28.jpg",
+                   "https://i.postimg.cc/VLM7XvPQ/Compressed-Img-29.jpg",
+                   "https://i.postimg.cc/hjSMB1XK/Compressed-img-3.jpg",
+                   "https://i.postimg.cc/JzLpx8Ry/Compressed-img-30.jpg",
+                   "https://i.postimg.cc/BnBMwzvm/Compressed-img-31.jpg",
+                   "https://i.postimg.cc/ZqfjJyp3/Compressed-img-35.jpg",
+                   "https://i.postimg.cc/cJGXDSZg/Compressed-img-4.jpg",
+                   "https://i.postimg.cc/D00gWfQD/Compressed-img-5.jpg",
+                   "https://i.postimg.cc/QCzqcL0M/Compressed-img-6.jpg",
+                   "https://i.postimg.cc/DyW6nZw4/Compressed-img-7.jpg",
+                   "https://i.postimg.cc/nz02c9mB/Compressed-img-8.jpg",
+                   "https://i.postimg.cc/fWqCGXDh/Compressed-img-9.jpg",
+                   "https://i.postimg.cc/vm1x61C5/Compressed-img-34.jpg",
+                   "https://i.postimg.cc/7ZB912h6/Compressed-Img-1.jpg",
+                   "https://i.postimg.cc/Yqzb9VwQ/Compressed-img-10.jpg",
+                   "https://i.postimg.cc/K8cQgNZw/Compressed-img-11.jpg",
+                   "https://i.postimg.cc/qMT1prWk/Compressed-img-12.jpg",
+                   "https://i.postimg.cc/90zk3HMd/Compressed-img-13.jpg",
+                   "https://i.postimg.cc/L6cbW7MP/Compressed-img-36.jpg",
+                   "https://i.postimg.cc/v8SjrTq3/Compressed-img-37.jpg",
+                   "https://i.postimg.cc/yx5bspgw/Compressed-img-38.jpg",
+                   "https://i.postimg.cc/T3n4v9R4/Compressed-img-39.jpg",
+                   "https://i.postimg.cc/kX6HfCL9/Compressed-img-40.jpg",
+                   "https://i.postimg.cc/Xv3DjCq7/Compressed-img-41.jpg",
+                   "https://i.postimg.cc/Xv81pYBK/Compressed-img-42.jpg",
+                   "https://i.postimg.cc/bJwCbf17/Compressed-img-43.jpg",
+                   "https://i.postimg.cc/PxV6QV4P/Compressed-img-44.jpg",
+                   "https://i.postimg.cc/T1yt7j7Q/Compressed-img-45.jpg",
+                   "https://i.postimg.cc/pVYQv688/Compressed-img-32.jpg"]
+
+        res_data = requests.get(img_url[random.randint(0, len(img_url) - 1)])
+
         while 1:
             a = '.' * i
             try:
-                upload_tweet_img = session.post(
-                    f'https://upload.twitter.com/i/media/upload.json?command=INIT&source_url={gif_urls[random.randrange(11)]}?&media_type=image/gif&media_category=tweet_gif',
-                    headers=headers)
-                break
-            except requests.ConnectionError:
-                sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}\n")
-                sys.stdout.flush()
-                i += 1
-                if i > 3:
-                    i = 0
-            time.sleep(1)
-
-        save_media_id = upload_tweet_img.content.decode('UTF-8')
-
-        save_media_id = save_media_id[save_media_id.index('media_id') + 10: save_media_id.index(',')]
-
-        while 1:
-            Tweet_Text = arr[choose_random_tweet] + f"\nللمرة {random.randint(0, 99999999)} دة حقنا"
-            print(f'\r{bcolors.WARNING}image upload is in progress{bcolors.BOLD}\n')
-            upload_inprogress = session.get(
-                f'https://upload.twitter.com/i/media/upload.json?command=STATUS&media_id={save_media_id}',
-                headers=headers)
-            if upload_inprogress.content.decode('UTF-8').__contains__('succeeded'):
-                print(f'\r{bcolors.OKGREEN}image upload is succeeded\n{bcolors.BOLD}')
-                break
-            time.sleep(1)
-
-
-        while 1:
-            a = '.' * i
-            try:
-                SEND_TWEET = session.post('https://twitter.com/i/api/graphql/Mvpg1U7PrmuHeYdY_83kLw/CreateTweet',
-                                          headers=headers,
-                                          json={"variables": {"tweet_text": Tweet_Text, "media": {
-                                              "media_entities": [{"media_id": save_media_id, "tagged_users": []}],
-                                              "possibly_sensitive": 'false'}, "withDownvotePerspective": 'false',
-                                                              "withReactionsMetadata": 'false',
-                                                              "withReactionsPerspective": 'false',
-                                                              "withSuperFollowsTweetFields": 'true',
-                                                              "withSuperFollowsUserFields": 'true',
-                                                              "semantic_annotation_ids": [],
-                                                              "dark_request": "false"},
-                                                "features": {"dont_mention_me_view_api_enabled": 'true',
-                                                             "interactive_text_enabled": 'true',
-                                                             "responsive_web_uc_gql_enabled": 'false',
-                                                             "vibe_api_enabled": 'false',
-                                                             "responsive_web_edit_tweet_api_enabled": 'false',
-                                                             "standardized_nudges_misinfo": 'true',
-                                                             "responsive_web_enhance_cards_enabled": 'false'},
-                                                "queryId": "Mvpg1U7PrmuHeYdY_83kLw"})
+                res_data = requests.get(img_url[random.randint(0, len(img_url) - 1)])
                 break
             except requests.ConnectionError:
                 sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
@@ -715,6 +758,63 @@ while 1:
                     i = 0
             time.sleep(1)
 
-        print(f'{bcolors.BOLD}\rTWEET_WITH_IMG_SEND{bcolors.BOLD}\n')
+        resource_url = 'https://upload.twitter.com/1.1/media/upload.json'
+
+        upload_image = {
+            'media': res_data.content,
+            'media_category': 'tweet_image'}
+
+        while 1:
+            a = '.' * i
+            try:
+                media_id = session.post(resource_url, headers=headers, files=upload_image)
+                break
+            except requests.ConnectionError:
+                sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
+                sys.stdout.flush()
+                i += 1
+                if i > 3:
+                    i = 0
+            time.sleep(1)
+
+        x = json.loads(media_id.content.decode('UTF-8'))
+        save_id = x['media_id']
+
+        while 1:
+            a = '.' * i
+            try:
+                SEND_IMG = session.post('https://twitter.com/i/api/graphql/Mvpg1U7PrmuHeYdY_83kLw/CreateTweet',
+                                        headers=headers,
+                                        json={"variables": {"tweet_text": Tweet_Text, "media": {
+                                            "media_entities": [{"media_id": save_id, "tagged_users": []}],
+                                            "possibly_sensitive": 'false'}, "withDownvotePerspective": 'false',
+                                                            "withReactionsMetadata": 'false',
+                                                            "withReactionsPerspective": 'false',
+                                                            "withSuperFollowsTweetFields": 'true',
+                                                            "withSuperFollowsUserFields": 'true',
+                                                            "semantic_annotation_ids": [],
+                                                            "dark_request": 'false'},
+                                              "features": {"dont_mention_me_view_api_enabled": 'true',
+                                                           "interactive_text_enabled": 'true',
+                                                           "responsive_web_uc_gql_enabled": 'false',
+                                                           "vibe_api_enabled": 'false',
+                                                           "responsive_web_edit_tweet_api_enabled": 'false',
+                                                           "standardized_nudges_misinfo": 'true',
+                                                           "responsive_web_enhance_cards_enabled": 'false'},
+                                              "queryId": "hC1nuE-2d1NX5LYBuuAvtQ"})
+                break
+            except requests.ConnectionError:
+                sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
+                sys.stdout.flush()
+                i += 1
+                if i > 3:
+                    i = 0
+            time.sleep(1)
+
+        print(f'{bcolors.OKGREEN}\rTWEET_WITH_IMG_SEND{bcolors.BOLD}\n')
+
+        number_of_tweet += 1
+
         Timer_Countdown = random.randint(30, 40)
+
     time.sleep(1)
