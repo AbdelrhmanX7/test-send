@@ -728,8 +728,6 @@ while 1:
            "https://i.postimg.cc/bJxDHH5X/Compressed-img-49.jpg", "https://i.postimg.cc/9M5w7NJt/Compressed-img-50.jpg",
            "https://i.postimg.cc/d3J7WZMh/Compressed-img-51.jpg", "https://i.postimg.cc/KYgg4yr8/Compressed-img-52.jpg"]
 
-        res_data = requests.get(img_url[random.randint(0, len(img_url) - 1)])
-
         while 1:
             a = '.' * i
             try:
