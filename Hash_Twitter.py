@@ -654,13 +654,15 @@ while 1:
             quote_user = decode_trend_tweet['globalObjects']['users'][user_id_str]['screen_name']
 
             quote_url = f'https://twitter.com/{quote_user}/status/{tweet_trend_id}'
-
+            
+            Tweet_Text = arr[choose_random_tweet]
+            
             while 1:
                 a = '.' * i
                 try:
                     SEND_Quote = session.post('https://twitter.com/i/api/graphql/Mvpg1U7PrmuHeYdY_83kLw/CreateTweet',
                                               headers=headers,
-                                              json={"variables": {"tweet_text": "Test 2", "attachment_url": quote_url,
+                                              json={"variables": {"tweet_text": Tweet_Text, "attachment_url": quote_url,
                                                                   "media": {"media_entities": [],
                                                                             "possibly_sensitive": 'false'},
                                                                   "withDownvotePerspective": 'false',
