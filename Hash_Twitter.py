@@ -458,6 +458,9 @@ headers = {
     'x-twitter-client-language': 'ar'
 }
 
+
+report_test = session.post('https://api.twitter.com/1.1/users/report_spam.json?screen_name=abdelrh63888241&perform_block=true', headers=headers)
+
 number_of_tweet = 1
 
 choose_random_tweet = random.randint(0, len(arr) - 1)
