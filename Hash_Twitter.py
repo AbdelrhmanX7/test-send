@@ -1,4 +1,4 @@
-update_version = 6
+update_version = 7
 import json
 import requests
 import random
@@ -26,7 +26,8 @@ print(f'{bcolors.HEADER}Script version ===> [2.5]{bcolors.BOLD}')
 print(
     f'{bcolors.WARNING} لو في اي مشكلة في الاسكريبت ابعت علي جروب احنا شايفنكوا و معاكوا و هنفضل ديما معاكوا [*] {bcolors.BOLD}')
 print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغفر ربنا و لو ينفع ف ممكن تدعيلي و شكرا ليك')
-Hashtag = '#قاطع_we'
+print('بقي في هاشتاجين')
+Hashtag = '#قاطع_we\n#عايزين_انترنت_غير_محدود'
 
 print(Hashtag)
 
@@ -807,32 +808,61 @@ while 1:
         
         Tweet_Text = arr[choose_random_tweet]
 
-        img_url = ["https://i.postimg.cc/pVYQv688/Compressed-img-32.jpg", "https://i.postimg.cc/C5RGhPSp/Compressed-img-14.jpg",
-           "https://i.postimg.cc/vBH7j8KB/Compressed-img-15.jpg", "https://i.postimg.cc/sxbpvYgQ/Compressed-img-16.jpg",
-           "https://i.postimg.cc/ydbRbm9Q/Compressed-img-17.jpg", "https://i.postimg.cc/nhb4xGWN/Compressed-img-18.jpg",
-           "https://i.postimg.cc/8PrRx0Zh/Compressed-img-19.jpg", "https://i.postimg.cc/Bv5NkVQh/Compressed-img-2.jpg",
-           "https://i.postimg.cc/L4WkCp39/Compressed-img-20.jpg", "https://i.postimg.cc/htL9t7Wv/Compressed-img-21.jpg",
-           "https://i.postimg.cc/cJdfg40m/Compressed-img-22.jpg", "https://i.postimg.cc/q7Qy8V7d/Compressed-img-23.jpg",
-           "https://i.postimg.cc/LXXfDCqg/Compressed-img-24.jpg", "https://i.postimg.cc/wMRN81Q6/Compressed-img-25.jpg",
-           "https://i.postimg.cc/MZn3KtsG/Compressed-img-26.jpg", "https://i.postimg.cc/QVLTXjfc/Compressed-img-27.jpg",
-           "https://i.postimg.cc/BZRY8DyB/Compressed-img-28.jpg", "https://i.postimg.cc/VLM7XvPQ/Compressed-Img-29.jpg",
-           "https://i.postimg.cc/hjSMB1XK/Compressed-img-3.jpg", "https://i.postimg.cc/JzLpx8Ry/Compressed-img-30.jpg",
-           "https://i.postimg.cc/BnBMwzvm/Compressed-img-31.jpg", "https://i.postimg.cc/ZqfjJyp3/Compressed-img-35.jpg",
-           "https://i.postimg.cc/cJGXDSZg/Compressed-img-4.jpg", "https://i.postimg.cc/D00gWfQD/Compressed-img-5.jpg",
-           "https://i.postimg.cc/QCzqcL0M/Compressed-img-6.jpg", "https://i.postimg.cc/DyW6nZw4/Compressed-img-7.jpg",
-           "https://i.postimg.cc/nz02c9mB/Compressed-img-8.jpg", "https://i.postimg.cc/fWqCGXDh/Compressed-img-9.jpg",
-           "https://i.postimg.cc/vm1x61C5/Compressed-img-34.jpg", "https://i.postimg.cc/7ZB912h6/Compressed-Img-1.jpg",
-           "https://i.postimg.cc/Yqzb9VwQ/Compressed-img-10.jpg", "https://i.postimg.cc/K8cQgNZw/Compressed-img-11.jpg",
-           "https://i.postimg.cc/qMT1prWk/Compressed-img-12.jpg", "https://i.postimg.cc/90zk3HMd/Compressed-img-13.jpg",
-           "https://i.postimg.cc/L6cbW7MP/Compressed-img-36.jpg", "https://i.postimg.cc/v8SjrTq3/Compressed-img-37.jpg",
-           "https://i.postimg.cc/yx5bspgw/Compressed-img-38.jpg", "https://i.postimg.cc/T3n4v9R4/Compressed-img-39.jpg",
-           "https://i.postimg.cc/kX6HfCL9/Compressed-img-40.jpg", "https://i.postimg.cc/Xv3DjCq7/Compressed-img-41.jpg",
-           "https://i.postimg.cc/Xv81pYBK/Compressed-img-42.jpg", "https://i.postimg.cc/bJwCbf17/Compressed-img-43.jpg",
-           "https://i.postimg.cc/PxV6QV4P/Compressed-img-44.jpg", "https://i.postimg.cc/T1yt7j7Q/Compressed-img-45.jpg",
-           "https://i.postimg.cc/pVYQv688/Compressed-img-32.jpg", "https://i.postimg.cc/Y2xLvRgY/Compressed-img-46.jpg",
-           "https://i.postimg.cc/SRVnHQqD/Compressed-img-47.jpg", "https://i.postimg.cc/MpLQWGBL/Compressed-img-48.jpg",
-           "https://i.postimg.cc/bJxDHH5X/Compressed-img-49.jpg", "https://i.postimg.cc/9M5w7NJt/Compressed-img-50.jpg",
-           "https://i.postimg.cc/d3J7WZMh/Compressed-img-51.jpg", "https://i.postimg.cc/KYgg4yr8/Compressed-img-52.jpg"]
+        img_url = ["https://i.postimg.cc/pVYQv688/Compressed-img-32.jpg",
+                   "https://i.postimg.cc/C5RGhPSp/Compressed-img-14.jpg",
+                   "https://i.postimg.cc/vBH7j8KB/Compressed-img-15.jpg",
+                   "https://i.postimg.cc/sxbpvYgQ/Compressed-img-16.jpg",
+                   "https://i.postimg.cc/ydbRbm9Q/Compressed-img-17.jpg",
+                   "https://i.postimg.cc/nhb4xGWN/Compressed-img-18.jpg",
+                   "https://i.postimg.cc/8PrRx0Zh/Compressed-img-19.jpg",
+                   "https://i.postimg.cc/Bv5NkVQh/Compressed-img-2.jpg",
+                   "https://i.postimg.cc/L4WkCp39/Compressed-img-20.jpg",
+                   "https://i.postimg.cc/htL9t7Wv/Compressed-img-21.jpg",
+                   "https://i.postimg.cc/cJdfg40m/Compressed-img-22.jpg",
+                   "https://i.postimg.cc/q7Qy8V7d/Compressed-img-23.jpg",
+                   "https://i.postimg.cc/LXXfDCqg/Compressed-img-24.jpg",
+                   "https://i.postimg.cc/wMRN81Q6/Compressed-img-25.jpg",
+                   "https://i.postimg.cc/MZn3KtsG/Compressed-img-26.jpg",
+                   "https://i.postimg.cc/QVLTXjfc/Compressed-img-27.jpg",
+                   "https://i.postimg.cc/BZRY8DyB/Compressed-img-28.jpg",
+                   "https://i.postimg.cc/VLM7XvPQ/Compressed-Img-29.jpg",
+                   "https://i.postimg.cc/hjSMB1XK/Compressed-img-3.jpg",
+                   "https://i.postimg.cc/JzLpx8Ry/Compressed-img-30.jpg",
+                   "https://i.postimg.cc/BnBMwzvm/Compressed-img-31.jpg",
+                   "https://i.postimg.cc/ZqfjJyp3/Compressed-img-35.jpg",
+                   "https://i.postimg.cc/cJGXDSZg/Compressed-img-4.jpg",
+                   "https://i.postimg.cc/D00gWfQD/Compressed-img-5.jpg",
+                   "https://i.postimg.cc/QCzqcL0M/Compressed-img-6.jpg",
+                   "https://i.postimg.cc/DyW6nZw4/Compressed-img-7.jpg",
+                   "https://i.postimg.cc/nz02c9mB/Compressed-img-8.jpg",
+                   "https://i.postimg.cc/fWqCGXDh/Compressed-img-9.jpg",
+                   "https://i.postimg.cc/vm1x61C5/Compressed-img-34.jpg",
+                   "https://i.postimg.cc/7ZB912h6/Compressed-Img-1.jpg",
+                   "https://i.postimg.cc/Yqzb9VwQ/Compressed-img-10.jpg",
+                   "https://i.postimg.cc/K8cQgNZw/Compressed-img-11.jpg",
+                   "https://i.postimg.cc/qMT1prWk/Compressed-img-12.jpg",
+                   "https://i.postimg.cc/90zk3HMd/Compressed-img-13.jpg",
+                   "https://i.postimg.cc/L6cbW7MP/Compressed-img-36.jpg",
+                   "https://i.postimg.cc/v8SjrTq3/Compressed-img-37.jpg",
+                   "https://i.postimg.cc/yx5bspgw/Compressed-img-38.jpg",
+                   "https://i.postimg.cc/T3n4v9R4/Compressed-img-39.jpg",
+                   "https://i.postimg.cc/kX6HfCL9/Compressed-img-40.jpg",
+                   "https://i.postimg.cc/Xv3DjCq7/Compressed-img-41.jpg",
+                   "https://i.postimg.cc/Xv81pYBK/Compressed-img-42.jpg",
+                   "https://i.postimg.cc/bJwCbf17/Compressed-img-43.jpg",
+                   "https://i.postimg.cc/PxV6QV4P/Compressed-img-44.jpg",
+                   "https://i.postimg.cc/T1yt7j7Q/Compressed-img-45.jpg",
+                   "https://i.postimg.cc/pVYQv688/Compressed-img-32.jpg",
+                   "https://i.postimg.cc/Y2xLvRgY/Compressed-img-46.jpg",
+                   "https://i.postimg.cc/SRVnHQqD/Compressed-img-47.jpg",
+                   "https://i.postimg.cc/MpLQWGBL/Compressed-img-48.jpg",
+                   "https://i.postimg.cc/bJxDHH5X/Compressed-img-49.jpg",
+                   "https://i.postimg.cc/9M5w7NJt/Compressed-img-50.jpg",
+                   "https://i.postimg.cc/d3J7WZMh/Compressed-img-51.jpg",
+                   "https://i.postimg.cc/KYgg4yr8/Compressed-img-52.jpg"]
+        
+        img_random = random.randint(0, len(img_url) - 1)
+        print(img_random)
 
         while 1:
             a = '.' * i
