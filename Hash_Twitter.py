@@ -1,4 +1,4 @@
-update_version = 8
+update_version = 9
 import json
 import requests
 import random
@@ -20,7 +20,7 @@ class bcolors:
 
 print(f'{bcolors.FAIL}Update Not Found [X]{bcolors.BOLD}')    
 print('Keep going [Manual]')
-
+sys.exit()
 
 Auto_Login_Email = ''
 Auto_Login_PASSWORD = ''
