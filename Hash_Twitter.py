@@ -1,4 +1,4 @@
-update_version = 7
+update_version = 8
 import json
 import requests
 import random
@@ -17,6 +17,9 @@ class bcolors:
     ENDC = '\033[0m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
+
+print(f'{bcolors.FAIL}Update Not Found [X]{bcolors.BOLD}')    
+print('Keep going [Manual]')
 
 
 Auto_Login_Email = ''
