@@ -541,7 +541,7 @@ if not Find:
 
     pic_check.close()
 
-    print(f'{bcolors.WARNING} اسف يا برو غيرنا صورة البروفايل بتاعك علشان تتعمد الحملة و شكرا [*]{bcolors.BOLD}')
+    print(f'{bcolors.WARNING} اسف يا برو غيرنا صورة البروفايل بتاعك علشان تدعم الحملة و شكرا [*]{bcolors.BOLD}')
 
     print('كدة كدة عارفين انك مش هتمانع يا رجولة')
 
