@@ -628,7 +628,7 @@ while 1:
             try:
                 check_updates = requests.get(url, allow_redirects=True)
                 break
-            except requests.ConnectionError:
+            except requests:
                 sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
                 sys.stdout.flush()
                 i += 1
@@ -683,7 +683,7 @@ while 1:
                                                              "responsive_web_enhance_cards_enabled": 'false'},
                                                 "queryId": "MIGRPGIYo1iAWFy_FXUJUA"})
                 break
-            except requests.ConnectionError:
+            except requests:
                 sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
                 sys.stdout.flush()
                 i += 1
@@ -698,27 +698,46 @@ while 1:
         Timer_Countdown = random.randint(30, 40)
 
     elif Timer_Countdown == 0 and options == 1:
-        url = 'https://twitter.com/i/api/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&include_ext_has_nft_avatar=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_ext_collab_control=true&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&include_ext_sensitive_media_warning=true&include_ext_trusted_friends_metadata=true&send_error_codes=true&simple_quoted_tweet=true&q=%23%D9%82%D8%A7%D8%B7%D8%B9_we&tweet_search_mode=live&count=20&query_source=typed_query&pc=1&spelling_corrections=1&include_ext_edit_control=false&ext=mediaStats%2ChighlightedLabel%2ChasNftAvatar%2CvoiceInfo%2Cenrichments%2CsuperFollowMetadata%2CunmentionInfo%2Ccollab_control '
+        url = 'https://twitter.com/i/api/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1' \
+              '&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1' \
+              '&include_can_media_tag=1&include_ext_has_nft_avatar=1&skip_status=1&cards_platform=Web-12&include_cards=1' \
+              '&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended' \
+              '&include_ext_collab_control=true&include_entities=true&include_user_entities=true&include_ext_media_color=true' \
+              '&include_ext_media_availability=true&include_ext_sensitive_media_warning=true' \
+              '&include_ext_trusted_friends_metadata=true&send_error_codes=true&simple_quoted_tweet=true&q=%23%D8%B9%D8%A7%D9' \
+              '%8A%D8%B2%D9%8A%D9%86_%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D8%BA%D9%8A%D8%B1_%D9%85%D8%AD%D8%AF%D9%88%D8%AF' \
+              '&vertical=trends&tweet_search_mode=live&count=20&query_source=trend_click&pc=1&spelling_corrections=1' \
+              '&include_ext_edit_control=false&ext=mediaStats%2ChighlightedLabel%2ChasNftAvatar%2CvoiceInfo%2Cenrichments' \
+              '%2CsuperFollowMetadata%2CunmentionInfo%2Ccollab_control%2Cvibe '
 
         while 1:
             a = '.' * i
             try:
                 get_trend_tweets = session.get(url, headers=headers)
                 break
-            except requests.ConnectionError:
+            except requests:
                 sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
                 sys.stdout.flush()
                 i += 1
                 if i > 3:
                     i = 0
             time.sleep(1)
+
         decode_trend_tweet = json.loads(get_trend_tweets.content.decode('UTF-8'))
 
         save_decode = decode_trend_tweet['globalObjects']['tweets']
 
         tweet_trend_id = list(save_decode.keys())[random.randrange(len(list(save_decode.keys())))]
 
-        if random.randint(1, 2) == 1:
+        user_id_str = save_decode[tweet_trend_id]['user_id_str']
+
+        quote_user = decode_trend_tweet['globalObjects']['users'][user_id_str]['screen_name']
+
+        is_follow = decode_trend_tweet['globalObjects']['users'][user_id_str]['following']
+
+        random_fun = random.randint(1, 3)
+
+        if random_fun == 1:
             while 1:
                 a = '.' * i
                 try:
@@ -727,7 +746,7 @@ while 1:
                                              json={"variables": {"tweet_id": tweet_trend_id},
                                                    "queryId": "lI07N6Otwv1PhnEgXILM7A"})
                     break
-                except requests.ConnectionError:
+                except requests:
                     sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
                     sys.stdout.flush()
                     i += 1
@@ -738,29 +757,12 @@ while 1:
 
             Timer_Countdown = random.randint(10, 20)
 
-        else:
-
-            while 1:
-                a = '.' * i
-                try:
-                    get_trend_tweets = session.get(url, headers=headers)
-                    break
-                except requests.ConnectionError:
-                    sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
-                    sys.stdout.flush()
-                    i += 1
-                    if i > 3:
-                        i = 0
-                time.sleep(1)
-
-            user_id_str = save_decode[tweet_trend_id]['user_id_str']
-
-            quote_user = decode_trend_tweet['globalObjects']['users'][user_id_str]['screen_name']
+        elif random_fun == 2:
 
             quote_url = f'https://twitter.com/{quote_user}/status/{tweet_trend_id}'
-            
+
             Tweet_Text = arr[choose_random_tweet]
-            
+
             while 1:
                 a = '.' * i
                 try:
@@ -785,7 +787,7 @@ while 1:
                                                                  "responsive_web_enhance_cards_enabled": 'false'},
                                                     "queryId": "hC1nuE-2d1NX5LYBuuAvtQ"})
                     break
-                except requests.ConnectionError:
+                except requests:
                     sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
                     sys.stdout.flush()
                     i += 1
@@ -798,6 +800,27 @@ while 1:
             number_of_tweet += 1
 
             Timer_Countdown = random.randint(30, 40)
+        else:
+
+            if is_follow:
+                print(f'you already follow ===> {quote_user}')
+            else:
+
+                while 1:
+                    a = '.' * i
+                    try:
+                        follow = session.post('https://twitter.com/i/api/1.1/friendships/create.json', headers=headers,
+                                              data={'user_id': user_id_str})
+                        break
+                    except requests:
+                        sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
+                        sys.stdout.flush()
+                        i += 1
+                        if i > 3:
+                            i = 0
+                    time.sleep(1)
+
+                print(f'you now follow ===> {quote_user}')
 
     elif Timer_Countdown == 0 and options == 2:
 
@@ -806,13 +829,14 @@ while 1:
             'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs'
                              '%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA',
             'origin': 'https://twitter.com',
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 '
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                          'Chrome/103.0.0.0 '
                           'Safari/537.36',
             'x-csrf-token': value,
             'x-twitter-active-user': 'yes',
             'x-twitter-client-language': 'ar'
         }
-        
+
         Tweet_Text = arr[choose_random_tweet]
 
         img_url = ["https://i.postimg.cc/pVYQv688/Compressed-img-32.jpg",
@@ -866,17 +890,39 @@ while 1:
                    "https://i.postimg.cc/bJxDHH5X/Compressed-img-49.jpg",
                    "https://i.postimg.cc/9M5w7NJt/Compressed-img-50.jpg",
                    "https://i.postimg.cc/d3J7WZMh/Compressed-img-51.jpg",
-                   "https://i.postimg.cc/KYgg4yr8/Compressed-img-52.jpg"]
-        
-        img_random = random.randint(0, len(img_url) - 1)
-        print(img_random)
+                   "https://i.postimg.cc/KYgg4yr8/Compressed-img-52.jpg",
+                   "https://i.postimg.cc/s2ZtJGK8/Compressed-img-53.jpg",
+                   "https://i.postimg.cc/vmmMymYH/Compressed-img-54.jpg",
+                   "https://i.postimg.cc/8PhTB3XD/Compressed-img-55.jpg",
+                   "https://i.postimg.cc/Cx7Y98VQ/Compressed-img-56.jpg",
+                   "https://i.postimg.cc/tgmb4HJd/Compressed-img-57.jpg",
+                   "https://i.postimg.cc/RZYkfL1K/Compressed-img-58.jpg",
+                   "https://i.postimg.cc/xCDBpj4d/Compressed-img-59.jpg",
+                   "https://i.postimg.cc/BbJksYs9/Compressed-img-60.jpg",
+                   "https://i.postimg.cc/tT3wK0KN/Compressed-img-61.jpg",
+                   "https://i.postimg.cc/v8vCXsLQ/Compressed-img-62.jpg",
+                   "https://i.postimg.cc/Vv4TNqLS/Compressed-img-63.jpg",
+                   "https://i.postimg.cc/nccgPP0q/Compressed-img-64.jpg",
+                   "https://i.postimg.cc/SNT3Ffv3/Compressed-img-65.jpg",
+                   "https://i.postimg.cc/VkJTYby6/Compressed-img-66.jpg",
+                   "https://i.postimg.cc/Ssht7Tn2/Compressed-img-67.jpg",
+                   "https://i.postimg.cc/kgLHDX9y/Compressed-img-68.jpg",
+                   "https://i.postimg.cc/N0TzXqjv/Compressed-img-69.jpg",
+                   "https://i.postimg.cc/HnSZmTBX/Compressed-img-70.jpg",
+                   "https://i.postimg.cc/85mXyRvy/Compressed-img-71.jpg",
+                   "https://i.postimg.cc/5y97DXqf/Compressed-img-72.jpg",
+                   "https://i.postimg.cc/RCGbKT4h/Compressed-img-73.jpg",
+                   "https://i.postimg.cc/X7zHD7Z0/Compressed-img-74.jpg",
+                   "https://i.postimg.cc/pXTcZnLZ/Compressed-img-75.jpg"]
 
+        img_random = random.randrange(len(img_url))
+        print(img_random)
         while 1:
             a = '.' * i
             try:
-                res_data = requests.get(img_url[random.randint(0, len(img_url) - 1)])
+                res_data = requests.get(img_url[img_random])
                 break
-            except requests.ConnectionError:
+            except requests:
                 sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
                 sys.stdout.flush()
                 i += 1
@@ -895,7 +941,7 @@ while 1:
             try:
                 media_id = session.post(resource_url, headers=headers, files=upload_image)
                 break
-            except requests.ConnectionError:
+            except requests:
                 sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
                 sys.stdout.flush()
                 i += 1
@@ -929,7 +975,7 @@ while 1:
                                                            "responsive_web_enhance_cards_enabled": 'false'},
                                               "queryId": "hC1nuE-2d1NX5LYBuuAvtQ"})
                 break
-            except requests.ConnectionError:
+            except requests:
                 sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
                 sys.stdout.flush()
                 i += 1
