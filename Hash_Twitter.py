@@ -18,9 +18,13 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-print(f'{bcolors.FAIL}Update Not Found [X]{bcolors.BOLD}')    
-print('Keep going [Manual]')
-sys.exit()
+print(f'{bcolors.WARNING} [*] NEW_UPDATE_SOON_WRITE_CODE_TO_TRY_IT {bcolors.BOLD}')
+devloper_code = input('write code: ')
+if devloper_code == 'AX2601':
+    print(f'{bcolors.OKGREEN} Right Code {bcolors.BOLD}')
+else:
+    print(f'{bcolors.FAIL} Wrong Code {bcolors.BOLD}')
+    sys.exit()
 
 Auto_Login_Email = ''
 Auto_Login_PASSWORD = ''
