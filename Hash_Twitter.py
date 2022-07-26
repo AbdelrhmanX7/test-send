@@ -1,4 +1,4 @@
-update_version = 9
+update_version = 1
 import json
 import requests
 import random
@@ -29,7 +29,7 @@ else:
 Auto_Login_Email = ''
 Auto_Login_PASSWORD = ''
 print(f'{bcolors.WARNING}[*] NEW UPDATE{bcolors.BOLD}')
-print(f'{bcolors.HEADER}Script version ===> [2.5]{bcolors.BOLD}')
+print(f'{bcolors.HEADER}Script version ===> [2.6]{bcolors.BOLD}')
 print(
     f'{bcolors.WARNING} لو في اي مشكلة في الاسكريبت ابعت علي جروب احنا شايفنكوا و معاكوا و هنفضل ديما معاكوا [*] {bcolors.BOLD}')
 print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغفر ربنا و لو ينفع ف ممكن تدعيلي و شكرا ليك')
