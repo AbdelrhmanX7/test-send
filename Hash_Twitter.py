@@ -804,7 +804,7 @@ while 1:
 
             if is_follow:
                 print(f'you already follow ===> {quote_user}')
-                Timer_Countdown = 0
+                Timer_Countdown = 1
             else:
 
                 while 1:
