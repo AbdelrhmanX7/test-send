@@ -1,4 +1,4 @@
-update_version = 1
+update_version = 2
 import json
 import requests
 import random
@@ -25,7 +25,7 @@ print(f'{bcolors.WARNING}[*] NEW UPDATE{bcolors.BOLD}')
 print(f'{bcolors.HEADER}Script version ===> [2.6]{bcolors.BOLD}')
 print(f'{bcolors.WARNING} لو في اي مشكلة في الاسكريبت ابعت علي جروب احنا شايفنكوا و معاكوا و هنفضل ديما معاكوا [*] {bcolors.BOLD}')
 print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغفر ربنا و لو ينفع ف ممكن تدعيلي و شكرا ليك')
-Hashtag = '#قاطع_we\n#عايزين_انترنت_غير_محدود'
+Hashtag = '#عايزين_نت_غير_محدود'
 
 print(Hashtag)
 
