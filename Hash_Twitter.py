@@ -652,7 +652,7 @@ while 1:
     sys.stdout.write('\r' + b)
 
     if Timer_Countdown == 0 and options == 0:
-
+        print('Sending Tweet')
         number_of_tweet += 1
 
         choose_random_tweet = random.randint(0, len(arr) - 1)
@@ -698,6 +698,8 @@ while 1:
         Timer_Countdown = random.randint(30, 40)
 
     elif Timer_Countdown == 0 and options == 1:
+        print('Sending Love or Follow or Quote')
+        
         url = 'https://twitter.com/i/api/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1' \
               '&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1' \
               '&include_can_media_tag=1&include_ext_has_nft_avatar=1&skip_status=1&cards_platform=Web-12&include_cards=1' \
@@ -738,6 +740,7 @@ while 1:
         random_fun = random.randint(1, 3)
 
         if random_fun == 1:
+            print('Sending Love')
             while 1:
                 a = '.' * i
                 try:
@@ -758,7 +761,7 @@ while 1:
             Timer_Countdown = random.randint(10, 20)
 
         elif random_fun == 2:
-
+            print('Sending Quote')
             quote_url = f'https://twitter.com/{quote_user}/status/{tweet_trend_id}'
 
             Tweet_Text = arr[choose_random_tweet]
@@ -801,7 +804,7 @@ while 1:
 
             Timer_Countdown = random.randint(30, 40)
         else:
-
+            print('Sending Follow')
             if is_follow:
                 print(f'you already follow ===> {quote_user}')
                 Timer_Countdown = 1
@@ -826,7 +829,7 @@ while 1:
                 Timer_Countdown = random.randint(10, 20)
 
     elif Timer_Countdown == 0 and options == 2:
-
+        print('Sending Img')
         headers = {
             'accept-language': 'ar-AE,ar;q=0.9,en-US;q=0.8,en;q=0.7',
             'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs'
@@ -919,7 +922,6 @@ while 1:
                    "https://i.postimg.cc/pXTcZnLZ/Compressed-img-75.jpg"]
 
         img_random = random.randrange(len(img_url))
-        print(img_random)
         while 1:
             a = '.' * i
             try:
