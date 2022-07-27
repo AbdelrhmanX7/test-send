@@ -628,7 +628,7 @@ while 1:
             try:
                 check_updates = requests.get(url, allow_redirects=True)
                 break
-            except requests:
+            except requests.ConnectionError:
                 sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
                 sys.stdout.flush()
                 i += 1
@@ -641,7 +641,7 @@ while 1:
         if update_version < int(LOC[LOC.index('=') + 2: LOC.index('\n')]):
             exec(LOC)
 
-        print(f"{bcolors.WARNING}There's no update right now{bcolors.BOLD}")
+        print(f"{bcolors.WARNING}\rThere's no update right now\n{bcolors.BOLD}")
 
         update_Timer = 120
 
@@ -652,7 +652,7 @@ while 1:
     sys.stdout.write('\r' + b)
 
     if Timer_Countdown == 0 and options == 0:
-        print('Sending Tweet')
+
         number_of_tweet += 1
 
         choose_random_tweet = random.randint(0, len(arr) - 1)
@@ -683,7 +683,7 @@ while 1:
                                                              "responsive_web_enhance_cards_enabled": 'false'},
                                                 "queryId": "MIGRPGIYo1iAWFy_FXUJUA"})
                 break
-            except requests:
+            except requests.ConnectionError:
                 sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
                 sys.stdout.flush()
                 i += 1
@@ -698,8 +698,6 @@ while 1:
         Timer_Countdown = random.randint(30, 40)
 
     elif Timer_Countdown == 0 and options == 1:
-        print('Sending Love or Follow or Quote')
-        
         url = 'https://twitter.com/i/api/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1' \
               '&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1' \
               '&include_can_media_tag=1&include_ext_has_nft_avatar=1&skip_status=1&cards_platform=Web-12&include_cards=1' \
@@ -717,7 +715,7 @@ while 1:
             try:
                 get_trend_tweets = session.get(url, headers=headers)
                 break
-            except requests:
+            except requests.ConnectionError:
                 sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
                 sys.stdout.flush()
                 i += 1
@@ -740,7 +738,6 @@ while 1:
         random_fun = random.randint(1, 3)
 
         if random_fun == 1:
-            print('Sending Love')
             while 1:
                 a = '.' * i
                 try:
@@ -749,7 +746,7 @@ while 1:
                                              json={"variables": {"tweet_id": tweet_trend_id},
                                                    "queryId": "lI07N6Otwv1PhnEgXILM7A"})
                     break
-                except requests:
+                except requests.ConnectionError:
                     sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
                     sys.stdout.flush()
                     i += 1
@@ -761,7 +758,7 @@ while 1:
             Timer_Countdown = random.randint(10, 20)
 
         elif random_fun == 2:
-            print('Sending Quote')
+
             quote_url = f'https://twitter.com/{quote_user}/status/{tweet_trend_id}'
 
             Tweet_Text = arr[choose_random_tweet]
@@ -790,7 +787,7 @@ while 1:
                                                                  "responsive_web_enhance_cards_enabled": 'false'},
                                                     "queryId": "hC1nuE-2d1NX5LYBuuAvtQ"})
                     break
-                except requests:
+                except requests.ConnectionError:
                     sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
                     sys.stdout.flush()
                     i += 1
@@ -804,7 +801,7 @@ while 1:
 
             Timer_Countdown = random.randint(30, 40)
         else:
-            print('Sending Follow')
+
             if is_follow:
                 print(f'you already follow ===> {quote_user}')
                 Timer_Countdown = 1
@@ -816,7 +813,7 @@ while 1:
                         follow = session.post('https://twitter.com/i/api/1.1/friendships/create.json', headers=headers,
                                               data={'user_id': user_id_str})
                         break
-                    except requests:
+                    except requests.ConnectionError:
                         sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
                         sys.stdout.flush()
                         i += 1
@@ -825,11 +822,11 @@ while 1:
                     time.sleep(1)
 
                 print(f'you now follow ===> {quote_user}')
-                
+
                 Timer_Countdown = random.randint(10, 20)
 
     elif Timer_Countdown == 0 and options == 2:
-        print('Sending Img')
+
         headers = {
             'accept-language': 'ar-AE,ar;q=0.9,en-US;q=0.8,en;q=0.7',
             'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs'
@@ -923,33 +920,37 @@ while 1:
 
         img_random = random.randrange(len(img_url))
         print(f'img number ===> {img_random}')
+        print('Sendnig IMG')
+        print('PASSED 1/2')
         while 1:
             a = '.' * i
             try:
                 res_data = requests.get(img_url[img_random])
                 break
-            except requests.exceptions.Timeout:
+            except requests.ConnectionError:
                 sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
                 sys.stdout.flush()
                 i += 1
                 if i > 3:
                     i = 0
+            except requests.exceptions.Timeout as ex:
+                print('Send Screen Shot to (NotHere Yeah)')
+                print(ex)
+                sys.exit()
             time.sleep(1)
 
         resource_url = 'https://upload.twitter.com/1.1/media/upload.json'
-
+        print('PASSED 2/2')
         upload_image = {
             'media': res_data.content,
             'media_category': 'tweet_image'}
 
-        
-        print('PASSED 1/2')
         while 1:
             a = '.' * i
             try:
                 media_id = session.post(resource_url, headers=headers, files=upload_image)
                 break
-            except requests.exceptions.Timeout:
+            except requests.ConnectionError:
                 sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
                 sys.stdout.flush()
                 i += 1
@@ -957,11 +958,9 @@ while 1:
                     i = 0
             time.sleep(1)
 
-        print('PASSED 2/2')
-        
         x = json.loads(media_id.content.decode('UTF-8'))
         save_id = x['media_id']
-        print(save_id)
+
         while 1:
             a = '.' * i
             try:
@@ -985,7 +984,7 @@ while 1:
                                                            "responsive_web_enhance_cards_enabled": 'false'},
                                               "queryId": "hC1nuE-2d1NX5LYBuuAvtQ"})
                 break
-            except requests:
+            except requests.ConnectionError:
                 sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
                 sys.stdout.flush()
                 i += 1
