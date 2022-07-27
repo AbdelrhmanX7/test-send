@@ -928,7 +928,7 @@ while 1:
             try:
                 res_data = requests.get(img_url[img_random])
                 break
-            except requests:
+            except requests.Timeout:
                 sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
                 sys.stdout.flush()
                 i += 1
@@ -949,7 +949,7 @@ while 1:
             try:
                 media_id = session.post(resource_url, headers=headers, files=upload_image)
                 break
-            except requests:
+            except requests.Timeout:
                 sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
                 sys.stdout.flush()
                 i += 1
