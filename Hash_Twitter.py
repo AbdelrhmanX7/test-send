@@ -942,6 +942,8 @@ while 1:
             'media': res_data.content,
             'media_category': 'tweet_image'}
 
+        
+        print('PASSED 1/2')
         while 1:
             a = '.' * i
             try:
@@ -955,9 +957,11 @@ while 1:
                     i = 0
             time.sleep(1)
 
+        print('PASSED 2/2')
+        
         x = json.loads(media_id.content.decode('UTF-8'))
         save_id = x['media_id']
-
+        print(save_id)
         while 1:
             a = '.' * i
             try:
