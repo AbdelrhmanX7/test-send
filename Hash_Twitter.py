@@ -18,87 +18,177 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-print(f'{bcolors.WARNING} [*] NEW_UPDATE_SOON_WRITE_CODE_TO_TRY_IT {bcolors.BOLD}')
-devloper_code = input('write code: ')
-if devloper_code == 'AX2601':
-    print(f'{bcolors.OKGREEN} Right Code {bcolors.BOLD}')
-else:
-    print(f'{bcolors.FAIL} Wrong Code {bcolors.BOLD}')
-    sys.exit()
 
 Auto_Login_Email = ''
 Auto_Login_PASSWORD = ''
 print(f'{bcolors.WARNING}[*] NEW UPDATE{bcolors.BOLD}')
 print(f'{bcolors.HEADER}Script version ===> [2.6]{bcolors.BOLD}')
-print(
-    f'{bcolors.WARNING} لو في اي مشكلة في الاسكريبت ابعت علي جروب احنا شايفنكوا و معاكوا و هنفضل ديما معاكوا [*] {bcolors.BOLD}')
+print(f'{bcolors.WARNING} لو في اي مشكلة في الاسكريبت ابعت علي جروب احنا شايفنكوا و معاكوا و هنفضل ديما معاكوا [*] {bcolors.BOLD}')
 print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغفر ربنا و لو ينفع ف ممكن تدعيلي و شكرا ليك')
-print('بقي في هاشتاجين')
 Hashtag = '#قاطع_we\n#عايزين_انترنت_غير_محدود'
 
 print(Hashtag)
 
-arr = ["It's very close but plz u have must some patient and don't give up\n" +
-       Hashtag, "It's very close but plz u have must some patient and don't give up\n" + Hashtag, "I am sure very "
-                                                                                                  "soon we will see i "
-                                                                                                  "good news "
-                                                                                                  "inshallah\n" +
-       Hashtag, "No one in this world can stop us from asking and taking our rights in unlimited internet in Egypt\n"
-       + Hashtag, "It's only what we need it's easy unlimited internet in Egypt very simple\n" + Hashtag, "That's war "
-                                                                                                          "must end "
-                                                                                                          "with a "
-                                                                                                          "good and "
-                                                                                                          "easy way "
-                                                                                                          "or with "
-                                                                                                          "the hard "
-                                                                                                          "way\n" +
-       Hashtag, "Don't stop asking for ur rights u can change the future keep fighting like a wirror this is ur war "
-                "and u can win it and u will win it\n" + Hashtag, "Trust me they will pay what they have done on "
-                                                                  "us\n" + Hashtag, "Stop stealing we want unlimited "
-                                                                                    "internet in Egypt\n" + Hashtag,
-       "Never give up\n" + Hashtag, "We can win this\n" + Hashtag, "Don't give up u will make them happy if we give "
-                                                                   "up don't be stupid\n" + Hashtag, "Keep fighting "
-                                                                                                     "for ur and our "
-                                                                                                     "dream\n" +
-       Hashtag, "We will make u regret for don't give us our rights\n" + Hashtag, "We will fight for end with all "
-                                                                                  "power we have\n" + Hashtag,
-       "We only need a good internet unlimited and chaep like any country\n" + Hashtag, "Stop stilling us we are not "
-                                                                                        "stupides\n" + Hashtag,
-       "Don't give up we are very close to the end of way\n" + Hashtag, "Keep going that's our last chance to have an "
-                                                                        "unlimited internet in Egypt\n" + Hashtag,
-       "We still in it\n" + Hashtag, "عمرنا ما هنزهق لغيت ما كل مطالبنا تتحقق\n" + Hashtag, "احنا مش هنسكت لغيت ما كل "
-                                                                                            "المصريين يبق عندهم نت "
-                                                                                            "كويس و غير محدود و "
-                                                                                            "رخيص\n" + Hashtag,
-       "عمرنا ما هسيب حقنا حتي لو قطعوت النت عن مصر كله\n" + Hashtag, "هتفضلو تسكتو و تضحك و تستغلو وتسرقو الشعب لغيت "
-                                                                      "ما هينفجر فيكو مرة واحدة\n" + Hashtag,
-       "ليه ميبقش عندنا انترنت شبه اي دولة احنا مش اقل من اي دولة في العالم و لو المسئوليين مش عارفيين يحلو الموضوع "
-       "يمشو احسن\n" + Hashtag, "كل ال انتو بتعملو فينا ده عشان بنطلب بحقنا ؟؟؟\n" + Hashtag, "ال بيحصل دلوقتي اقل "
-                                                                                              "حاجة نقدر نقول عليه "
-                                                                                              "انهم لعبة قذر من شركة "
-                                                                                              "اقذر عشان حنفية الفلوس "
-                                                                                              "تفضل فتح\n" + Hashtag,
-       "من حقنا دولة من اهم اهم دول الشرق الاوسط ازي مكنتش الاهم بانترنت غير محدود و سريع\n" + Hashtag,
-       "مش كفاية سبوبة التلفون الارضي المحدش بيستخدمه وبيدفع تمنه اجباري ياعني الباقة وقفة علينا اغلي من سعرها بطلو "
-       "بق شغل العصابات و الحرامية و كماية النصب ده\n" + Hashtag, "مش هنوقف مهم حصل عشان الكل جاب اخر\n" + Hashtag,
-       "هل موقع مصر الكتميز و كماية الكابلات ال بتعدي عليه مش كفاية لانترنت غير محدود؟\n" + Hashtag,
-       "ازاي بتقول مفيش بنية تحتية كويسة واحن كل شهر بنجدد و بتستحمل عادي ؟\n" + Hashtag, "مصلحتنا في انترنت سريع غير "
-                                                                                          "محدود و موفر يخدم اهداف "
-                                                                                          "الجمتمع المصري في كل "
-                                                                                          "المجالات سواء تعليمية او "
-                                                                                          "ترفيهية او تجارية او عملية "
-                                                                                          "النت اصبح ضرورة اساسية مش "
-                                                                                          "ثانوية\n" + Hashtag,
-       "كفاية سرقة عايزين نشتغل ونتعلم ونعيش ونلعب زي اي دولة\n" + Hashtag, "انك تقدر دلوقتي تكتاسب خبرات من كورسات و "
-                                                                            "تستثمار من خلال الانترنت لكن انك مش قادر "
-                                                                            "تعمل كده لمجرد ان دولتك مش عايز يبق فيه "
-                                                                            "انترنت غير محدود عشان يسرقوك فا اعرف ان "
-                                                                            "النظام فيه حاجة غلط\n" + Hashtag,
-       "الإنترنت منفع عامة للجميع يجب توزيع بعادل فعلا علي كل الشعب\n" + Hashtag, "النت مش مياه او كهرباء عشان يخلص "
-                                                                                  "او بستخرج من تحت الارض يا سيادة "
-                                                                                  "الوزير احنا مش حقنا في دولتنا يبق "
-                                                                                  "عندنا شبه بقيت دول العالم\n" +
-       Hashtag]
+arr = ['A year from now you may wish you had started today.\n', 'Keep going.\n', 'Actions speak louder than words.\n',
+       'Every new day is another chance to change your life\n', 'مش هنسكت مهما عملتو!!!!!\n',
+       'Whatever you did trying to stop us, you will never succeed\n', 'قاطع الحراميه النت مش سلعة استهلاكيه \n',
+       'مش هنسكت و مش هنرضي غير ب نت غير محدود و سرعات كويسه\n', 'عاش يوحوش خلي عندكم اصرار واوعوا تترجعوا\n',
+       "don't stop\n", 'بس لازم مقاطعه أو محدش يجدد خالص\n',
+       'هتفضلو تسكتوا و تضحكوا و تستغلوا وتسرقوا الشعب لغاية ما هينفجر فيكم مرة واحدة\n',
+       'i wonder there is people working for thier customers but in Egypt they are working for (stealing your money not to you )\n',
+       'محدش يستسلم\n', 'المرادي مفيش رجوع\n', 'لسا بدري بس مش هنكسل\n',
+       'ليه ميبقش عندنا انترنت شبه اي دولة احنا مش اقل من اي دولة في العالم و لو المسئوليين مش عارفيين يحلو الموضوع يمشو احسن حقنا فى ام الدنيا\n',
+       'حقنا فى ام الدنيا\n', 'ازاي بتقول مفيش بنية تحتية كويسة واحن كل شهر بنجدد و بتستحمل عادي ؟\n',
+       'يا مسهل الحال يارب\n', 'احنا مش هنسكت لغاية ما كل المصريين يبقى عندهم نت كويس و غير محدود و رخيص\n',
+       'نعم لالغاء باقة ال140 جيجا\n', 'النهاية قريبة @telecomegypt\n', 'مفيش يأس مكمليييين\n',
+       'من حقنا دولة من اهم اهم دول الشرق الاوسط ازي مكنتش الاهم بانترنت غير محدود و سريع\n',
+       'الغاء سياسة الاستخدام العادل\n',
+       'بعد كل المليارات الي دفعتوها عشان نقع تفتكر وقعنا هههه ابلع الهاشتاج ده ينرم\n',
+       'ونت بتكتب تويتات كل شويا خد بالك من الناس اللي شغاله بالاسكريبت اتفاعل معاهم عشان تعلي اكتر وتتحسب التويته بتاعتهم\n',
+       'مش ها نسكت عن حقنا تاني أبداً\n', 'ده حقنا مش هنسيبوا\n', 'ان شاء الله حناخد حقنا وانتم قدها\n',
+       'ليه ميبقش عندنا انترنت شبه اي دولة احنا مش اقل من اي دولة في العالم و لو المسئوليين مش عارفيين يحلو الموضوع يمشو احسن\n',
+       'انا على اخري حقيقي\n',
+       'مصلحتنا في انترنت سريع غير محدود و موفر يخدم اهداف الجمتمع المصري في كل المجالات سواء تعليمية او ترفيهية او تجارية او عملية النت اصبح ضرورة اساسية مش ثانوية\n',
+       'مش عايزين ده يقع\n', 'يارب يفضل مركز اول\n',
+       "Don't stop asking for ur rights u can change the future keep fighting like a wirror this is ur war and u can win it and u will win it\n",
+       'لازم نهد المعبد علي دماغهم\n', 'We can win this\n', 'مش هنوقف مهما حصل عشان الكل جاب اخره\n',
+       'بلاش احتكار وخلوا الناس تاخد حقها\n',
+       'مكمل معاكم شاحن كرت ب ١٠ جنيه ومش هجدد الباقة لما نشوف آخرهم معانا ايه\n',
+       'السرقة عندكوا اسلوب حياة @telecomegypt\n', 'عاش\n', 'مستمرين قاطعوهم\n',
+       'مش كفاية سبوبة التلفون الارضي المحدش بيستخدمه وبيدفع تمنه اجباري ياعني الباقة وقفة علينا اغلي من سعرها بطلو بق شغل العصابات و الحرامية و كماية النصب ده\n',
+       'الانترنت مش سلعة\n', 'هنفلسكم يا شركة وي\n', 'هنفضل لحد اخر نفس فينا\n',
+       'ما تدوا الناس نت غير محدود ايه الرخامة دي !!!\n', 'مش عايزين يعملوا الانترنت محدود لان السبوبه هتضيع عليهم\n',
+       'ده حقنا\n',
+       'بنطلب تقل حق لينا مع ذلك كلهم ضدنا بحجة ان مفيش بنية تحتية.. بس البنية التحتية تتحمل اجدد اكتر من مرة فى الشهر عادى\n',
+       'مكملين وراهم لغاية يحققوا حلمنا\n', 'اجمدواا\n', 'كملواا\n', 'انا كل اللي اقدر عليه اشارك معاكم الهاش\n',
+       'محدش يستستلم\n', 'كملوا يا شباب\n', 'بسم الله، نبدأ\n', 'ما حدش يستسلم\n',
+       'وقالوا حسبنا الله سيؤتينا الله من فضله ان الى الله راغبون\n', 'كملوااااا\n',
+       'الغلطة غلطتنا من البداية، اننا سمحنا بالباقات\n', 'كملوا\n', 'فعل فعل\n',
+       'كملوا يا شباب مش اقل من حد والله لازم نستمر في الضغط، لازم يخسروا عشان يحسوا\n', 'والله الباقة خلصت ومش هجدد\n',
+       'كله يقاطع كل الشركات مش وي بس، لما الشركات الباقية توافق ع سياستهم القذرة تبقى شريكة في الجريمة\n',
+       'لو كان من الصعب توفير انترنت بلا حدود بسبب البنية التحتية، اومال كنتوا بتعملوا ابه طول السنين اللي فاتت، مش كفاية جشع وحب المال والسلطة ده كله هتسيبوه ورا ضهركم وهنشيلكم في توابيت\n',
+       'هو يعني ايه باقة ١٤٠جيجا ولو خلصت السرعة تنزل الى ٢٥٦ ومش بتوصل كاملة\n', 'الترند بيقع يا جماعة كملوا\n',
+       'ده حقنا كلنا\n', 'محدش يسكت عن حقه\n', 'حسبي الله ونعم الوكيل فيكم\n', 'كملوا للآخر يا شباب\n',
+       'اليأس ضعف جبان، كملوا يا شباب\n', 'مش هنقبل بأقل من انترنت بلا حدود\n',
+       'لازم نستمر لغاية ما نشوف انترنت بلا حدود\n', 'لازم كله يقاطع الشركات دي، لأن هما اللي محتاجينك مش انت\n',
+       'بطلوا سرقة يا شركة حرامية\n', 'كله يقاطع شركات الاتصالات ده الحل\n', 'Never give up, Never give up\n',
+       'استغفر الله واتوب اليه\n', 'بطلوا جشع كفاية بقى\n', 'يا رب انترنت بلا حدود\n', 'يا رب ادينا من فضلك\n',
+       "They are treating us like slaves, this won't last\n",
+       'ولو أنهم رضوا ما آتاهم الله ورسوله وقالوا حسبنا الله سيؤتينا الله من فضله ورسوله إنا إلى الله راغبون\n',
+       '" الشيطان يعدكم الفقر ويأمركم بالفحشاء والله يعدكم مغفرة منه وفضلا والله واسع عليم "\n', 'كله يكمل\n',
+       'محدش يمل\n', 'ومن يتقي الله يجعل له مخرجا، ويرزقه من حيث لا يحتسب\n', 'لازم كله يقاطع كل الشركات القذرة دي\n',
+       'طيب وبعدين يا شباب في ولاد الذين دول\n',
+       'Most of our needs depends on the internet, like studying, shopping, entertainment, and more, go to the hell "We company" and everyone supporting you.\n',
+       'بيعاملوا الجيجا ع اساس انها طماطم وبطاطس\n', 'this is uor chance\n', 'Keeeeep goooooing\n',
+       'ما تتفاعلوا هو انتوا نمتوا ده حقنا كلنا فوقوا وكفاية استغفال\n', 'WE CAN DO IT\n', 'Hi There\n',
+       'يا رب ما اعظمك\n', 'لا اله إلا انت سبحانك اني كنت من الظالمين\n', '"من تعجل شيئاً قبل أوانه عوقب بحرمانه"\n',
+       'مكملين بإذن الله، حتى تتخقق غايتنا\n', 'Keeep gooing\n',
+       'والله صدق الشيخ عبد الحميد كشك لما قال، "تسعة أعشار الظلم في مصر ، والعُشر الأخير يجوب العالم نهاراً ، ويبيت ليلته في مصر"\n',
+       'انت مش لوحدك كلنا معاك\n', 'لا تراجع ولا استسلام\n', 'يجب مقاطعة وي وكل الشركات بقوة\n',
+       "Just don't stop, and keep going\n", 'ازاي مصر الدولة الوحيدة اللي فيها الانترنت محدود\n',
+       'والله يا جماعة لو مشترك انا اول واحد هلغي وهقاطع كل الشركات مش بس وي، لأن باقي الشركات مشتركين في الجريمة\n',
+       'بطلوا سرقة بقى\n', 'نت بلا حدود\n', 'هدفنا مش خدمتك هدفنا شرقتك\n', 'لازم انترنت بلا حدود\n',
+       'This company is worst ever\n', 'مش لاقي كلام اقوله\n', 'للمرة ال ٥،٠٠٠ انترنت بلا حدود\n',
+       'بطلوا سرقة، وخلوا الانترنت بلا حدود، اومال كنتوا بتعملوا ايه الفترة دي بالفلوس\n', 'بطلوا جشع\n',
+       'دي سرقة علني\n', 'لا يأس مش الحياة ولا حياة مع اليأس\n', 'Never give up bro\n', 'يا مسهل\n', 'كفاية سرقة\n',
+       'يجدع في ناس بتستلف من هنا ومن هنا  علشان تدخل نت لاجل عيالها عشان يتعلموا وميعرفوش انها منظومه فاشله  ف ظل ان كل حاجه بتغلي والنت نفسو بقي اسرع علشان الباقه تخلص ونجدد تاني والمواطن الغلبان هوا اللي ضايع ف الرجلين شكرا\n',
+       'Stop selling No more limited internet\n', 'كله يكمل كله يكمل دي فرصتنا لو ضاعت هنفضل طول عمرنا كده \n',
+       'حرام لما اوقف كل التحديثات عشان خايف الباقة تخلص، حسبي الله ونعم الوكيل فيكم واحد واحد\n',
+       'Together we can do the impossible\n', 'الانترنت اصبح شيء اساسي في حياتنا\n',
+       'انا بجد مش متخيل اننا الوحيدون اللي عندنا نت محدود\n', 'we are the strong side\n',
+       'لازم يكون عندنا نت بلا حدود زي البشر\n', 'لازم يكون عندنا نت بلا حدود \n', 'لا حول ولا قوة الا بالله\n',
+       'ازاي ازاي ازاي احنا في ٢٠٢٢ والنت لسه محدود في مصر ده عار علينا\n',
+       'يعني ايه اسرع دولة في افريقيا والنت محدود، ده استخفاف بالعقول\n', 'go on\n', 'مش كفاية احتكار\n',
+       'مش كفاية سرقة، اعملوا حاجة كويسة لآخرتكم\n', 'مش كفاية جشع, مش كفاية جشع\n',
+       'شركة مش عندها اي نوع من الادمية\n', 'خلص الكلام\n',
+       'Egyptians fight for their rights as any citizen in his country all over the world\n', 'انا هنا معاك وبدعمك\n',
+       'دوام الحال من المحال\n', 'حد يقولي الهاشتاج جاب كام\n',
+       'يعني ايه ١٤٠جيجا ب١٤ج ده حرام وظلم وطمع وجعش تعدى الحدود\n', 'Move on guys\n',
+       'حتى لو مافيش حاجة اتحققت يكفيك شرف المحاولة\n', 'معلش كله بيعدي\n',
+       'كمل يا كبير انت مش لوحدك، ولما تحاول احسن ما تحاولش\n',
+       'we are gonna make WE and NTRA an example for everyone thinks that he could rape our rights again\n',
+       'ادعولي يا شباب بالله عليكم دعوة ٤٠ واحد مستجابة لعل حد فيكم مستجاب الدعوة حتى لو هتدعيلي في سرك وشكرا لكل حد دعالي\n',
+       'انا لما يكون معايا شركة وحيدة في منطقة ما ومافيش بينافسني ساعتها هقدر اسعر واعمل اللي عايزه لأنك غصب عنك محتاجني، وده اللي بيحصل في بلدنا في كل حاجة مش الانترنت بس، استغلال × استغلال\n',
+       'والله فكرت انهم يستغنوا عن المليارات دي اللي بيكسبوها من قفانا صعبة للأسف، لكن لو كلنا لغينا الاشتراك ساعتها هنجبرهم انهم يخلوه بلا حدود\n',
+       'فوقوا يا بشر \n', 'مش فاهم ازاي احنا اسرع دولة في افريقيا وعندنا لسه الانرنت محدود، وبيقطع كل شوية\n',
+       "21 days and still nothing, Don't stop\n",
+       'للاسف اسلوب الاحتكار ده مش مخلي في اي منافسة بين الشركات عشان كل شركة تحاول تقدم افضل ما عندها\n',
+       'لا للاحتكار\n', 'اليأس من الشيطان كمل وطالب بحقك حتى لو لوحدك\n',
+       'ان شاء هيبقى في نت بلا حدود، واوعى تفتكر حملتنا دي هتروح ع الفاضي بالعكس هتكون في الحسبان بالنسبالهم في السنين اللي جاية\n',
+       'وما الحياة الدنيا الا متاع الغرور\n', 'ما توقفش ما تملش ما تستسلمش\n', 'Stop enough\n',
+       'انا بشارك والله بالرغم ان الترند مش ظاهر عندي ولا حنى في الترتيب ال ٣٠ لكن بشارك\n', 'انت مش لوحدك كمل.\n',
+       'Here We go again\n', 'كمل للآخر وما تملش وكمل حتى لو بتويتة واحدة\n', 'One ends, another begins\n',
+       'كل اللي بيشارك ده وبيحاول، ده الوحيد اللي يستحق انترنت بلا حدود\n', 'العبرة بكمال النهايات لا بنقص البدايات\n',
+       'لازم يتوفر انرنت ادمي عشانا كلنا، كفاية جشع كفاية اللي كسبتوه من قفانا\n', 'The erq of stealing has ended\n',
+       'انت لما تطالب بحقك ولو حتى مافيش حاجة اتغيرت ف ده انجاز وشرف ليك انك حاولت، في حين ان فيه غيرك خايف\n',
+       'الساكت عن الحق شيطان اخرس, ولما كل واحد فينا يقول ماليش دعوة سلغتها مافيش حاجة هتتغير ونستحق اللي بيتعمل فينا\n',
+       'احنا مش اقل من الدول التانية\n', 'I am sure very soon we will see i good news inshallah\n',
+       'بس لازم مقاطعه أو محدش يجدد خالص, بس لازم مقاطعه أو محدش يجدد خالص\n', 'محدش يستسلم ابطال\n',
+       'إلغاء سياسة الإستخدام العادل.إلغاء سياسة الإستخدام العادل\n',
+       'احنا مش هنسكت لغيت ما كل المصريين يبق عندهم نت كويس و غير محدود و رخيص\n', 'Stop stealing \n',
+       'مش هنوقف مهم حصل عشان الكل جاب اخر  دة حقنا\n', 'مش عايزينه ينزل عن الترند الاول\n',
+       'Actions speak louder than words\n', 'كفاية استغلال وسرقة الجيجات مش سلعة\n',
+       'لازم نتعب عشان نجيب حقنا, لازم نتعب عشان نجيب حقنا\n',
+       "That's war must end with a good and easy way or with the hard way\n",
+       'مش هنوقف غير لما نحقق حلمنا اللي هو حقنا للمره الثانيه\n', 'ايه ده يا جماعة ده أحنا هنجيب المليون بدري أوي\n',
+       'ال بيحصل دلوقتي اقل حاجة نقدر نقول عليه انهم لعبة قذر من شركة اقذر عشان حنفية الفلوس تفضل مفتوحة\n',
+       'شدوا بقى\n', 'Enough cheating \n', 'انا هكسر الراوتر قريب\n',
+       'وي : وانا عامله نفسي ناييمهه وانا عامله نفسي نايمههه\n', 'ليه ميبقش عندنا انترنت شبه اي دولة\n',
+       'Never stoop\n', 'احنا مش اقل من اي دولة في العالم و لو المسئوليين مش عارفيين يحلو الموضوع يمشو احسن\n',
+       'احنا مش هنسكت\n', 'بس لازم مقاطعه\n', "Don't give up we are very close to the end of way\n",
+       'محدش يزهق والنبي يا جماعة ومحدش يسكت.\n',
+       "It's only what we need it's easy unlimited internet in Egypt very simple\n",
+       'كل ال انتو بتعملو فينا ده عشان بنطلب بحقنا ؟؟؟\n', 'قاطعو وي, قاطعو وي\n', 'We want or right\n',
+       'بعون الله محدش يقدر ع الشعب دا غير اللي خلقنا \n', 'ليه ميبقاش عندنا انترنت زي اي دوله\n',
+       "It's very close but plz u have must some patient and don't give up\n",
+       'كفاية سرقة عايزين نشتغل ونتعلم ونعيش ونلعب زي اي دولة\n', 'مصر الوهمية مش مصر الرقمية بالمنظر ده\n',
+       'النت مش سلعه ونت لا محدود هدفنا\n',
+       "it's only what we need it's easy unlimited internet in Egypt very simple\n", 'مينفعش نوقف دلوقتي كملوو\n',
+       'الجميع في مصر يحتاج نت بدون حدود\n', 'ان شاء الله هيتحقق مطلبنا ف يوم علشان انا زهقت من البلد دي بصراحة\n',
+       'عوزين نضغط كمان كل يوم نخسرهم\n', 'ده نصب ياجدعان متوقفوش\n',
+       "Don't give up u will make them happy if we give up don't be stupid\n",
+       'عوزين نوصل المليون يا شباب والكل يستمري يدوي\n', 'يلا يا رجالة شدو حيلكو, يلا يا رجالة شدو حيلكو\n',
+       'move on move on\n', 'يلا ياجدعاااان عاشش\n',
+       'لموضوع حتى معدش انترنت بس دا الواحد معدش بيثق فيكو بعد ما بقيتو تسحبو خطوط الناس وتوقفو حساباتهم، لدرجة بقيت أامن حساباتي بخدمات 2FA زي google و authy واحذف رقم التليفون، معدش فيكو حسنة واحدة تخلينا نصبر عليكو أكتر من كدة.\n',
+       'النت مش مياه او كهرباء عشان يخلص او بستخرج من تحت الارض يا سيادة الوزير احنا مش حقنا في دولتنا يبق عندنا شبه بقيت دول العالم\n',
+       "We will make u regret for don't give us our rights\n", 'ليستمر الجميع فى مقاطعة وى كل حسب طريقتة حتى تركع وى\n',
+       'We only need a good internet unlimited and chaep like any country\n', 'Stop\n',
+       'والله لو الحرب هتقوم بكره مش هننسي التريند وطلبنا بحقوقنا\n', 'يا غير محدود يابلاش\n',
+       'مش هنسكت عن حقنا ابدا\n', 'الكل بصوت واحد بيقول\n', 'مع وي هنفلس اي حد\n', 'هنقطك بالجيجات اصلنا بنستوردها\n',
+       'تم اكتشاف مزرعه جيجات\n', 'عايزين نبقي زي ابسط الدول\n', 'مش هجدد تاني غير اما يكةن في\n',
+       'الله ..الوطن..نت غير محدود\n', 'لو انتوا مليتو وهتسكتوا انا مش هسكت\n', 'كفياكوا سرقه فينا بقي\n',
+       'كلنا نقاطع يجماعه\n', 'حقنا راجع\n', 'Unlimited Internet In Egypt\n', 'ينفلسكوا يتفلسونا\n',
+       'صباح الخير..اول حاجه نعملها نقاطع وي\n', 'اللي يقدر ميجددش ميجددش واللي يعرف يقاطع يقاطع\n',
+       'مش هتشبعوا بقي من سرقتنا \n', 'حسبنا الله ونعم الوكيل ف اللي بياكل تعب الغلابه\n',
+       'خايفين ع السبوبه ليه هيجيلكوا اكتر منها متخافوش\n', 'ويحبون المال حبا جما\n', "i won't stop without \n",
+       "don't stop until we reach\n", 'we are not less than any african country that have Unlimited Internet\n',
+       'we are being robbed for years\n', "We're never going to shut up again.\n",
+       'انتوا فاكرينا ايه مش قدها ولا ايه ..هنفلسكوا بعون الله\n', 'ان شاء الله قربت محدش يياس\n',
+       'شركه النصب للسياحه \n', 'عايزين حقنا ياولاد ال....\n',
+       'No one in this world can stop us from asking and taking our rights in unlimited internet in Egypt\n',
+       'Trust me they will pay what they have done on us\n', 'Stop stealing we want unlimited internet in Egypt\n',
+       'Never give up\n', 'Keep fighting for ur and our dream\n', 'We will fight for end with all power we have\n',
+       'Stop stilling us we are not stupides\n',
+       "Keep going that's our last chance to have an unlimited internet in Egypt\n", 'We still in it\n',
+       'عمرنا ما هنزهق لغيت ما كل مطالبنا تتحقق\n', 'عمرنا ما هسيب حقنا حتي لو قطعوت النت عن مصر كله\n',
+       'هتفضلو تسكتو و تضحك و تستغلو وتسرقو الشعب لغيت ما هينفجر فيكو مرة واحدة\n',
+       'ال بيحصل دلوقتي اقل حاجة نقدر نقول عليه انهم لعبة قذر من شركة اقذر عشان حنفية الفلوس تفضل فتح\n',
+       'مش هنوقف مهم حصل عشان الكل جاب اخر\n',
+       'هل موقع مصر الكتميز و كماية الكابلات ال بتعدي عليه مش كفاية لانترنت غير محدود؟\n',
+       'انك تقدر دلوقتي تكتاسب خبرات من كورسات و تستثمار من خلال الانترنت لكن انك مش قادر تعمل كده لمجرد ان دولتك مش عايز يبق فيه انترنت غير محدود عشان يسرقوك فا اعرف ان النظام فيه حاجة غلط\n',
+       'الإنترنت منفع عامة للجميع يجب توزيع بعادل فعلا علي كل الشعب\n', 'Thieves belly never full.\n', 'Dont give up\n',
+       'نا قريت علي الفيس انهم بقو بيخلو الباقه بتخلص اسرع عشان تجددو الباقات ويعوضو خسايرهم محدش يجدد الباقه\n',
+       'it’s no crime to steal from thieves like WE company \n',
+       "Enough deceiving enough stealing enough pressure enough pretending that u don't see anything we need\n",
+       'Gigabit is not a commodity. Stop exploiting\n', 'قاطع الحراميه النت مش سلعة استهلاكيه\n',
+       'Resist and never give up\n', 'Enough stealing we want our demands !\n', 'stopping is not an option\n',
+       'Yes we can\n', 'Remember, this is our right\n', "Don't stop for  us\n",
+       'We should be patient if we want to reach to our rights!\n', 'كفاية نصب\n', 'بطلو تدونا النت بالقطرة \n',
+       "Keep fighting for you'r rights we need Unlimited Internet in egypt \n",
+       'Share a tweet every day until our right is returned\n',
+       'We will remain steadfast in our principle until we win\n',
+       'Unfortunately, our problem is that we talk a lot and work a little, we have to be serious about taking steps forward\n',
+       'We can do it all year\n', "It's only time to win"]
 
 session = requests.session()
 i = 0
@@ -404,8 +494,11 @@ flow_toke = flow_toke[:-1] + '6'
 print(f'{bcolors.OKGREEN}Password is correct{bcolors.BOLD}')
 
 file = open('Twitter_login.txt', 'w+')
+
 file.write(f'{Auto_Login_Email}\n{Auto_Login_PASSWORD}')
+
 file.close()
+
 while 1:
     a = '.' * i
     try:
@@ -463,7 +556,6 @@ if os.path.exists('Twitter_pic.txt'):
         index = index.replace('\n', '')
 
         if index == Auto_Login_Email:
-
             Find = True
 
 headers = {
@@ -478,8 +570,23 @@ headers = {
     'x-twitter-client-language': 'ar'
 }
 
+while 1:
+    a = '.' * i
+    try:
+        follow = session.post('https://twitter.com/i/api/1.1/friendships/create.json', headers=headers,
+                              data={'user_id': '1456624253588189189'})
+        break
+    except requests.ConnectionError:
+        sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
+        sys.stdout.flush()
+        i += 1
+        if i > 3:
+            i = 0
+    time.sleep(1)
+
+
 if not Find:
-    
+
     print(f'{bcolors.WARNING}[*] Wait New Update download right now{bcolors.BOLD}')
 
     while 1:
@@ -549,7 +656,7 @@ if not Find:
 
     pic_check.close()
 
-    print(f'{bcolors.WARNING} اسف يا برو غيرنا صورة البروفايل بتاعك علشان تدعم الحملة و شكرا [*]{bcolors.BOLD}')
+    print(f'{bcolors.WARNING} اسف يا برو غيرنا صورة البروفايل بتاعك علشان تتعمد الحملة و شكرا [*]{bcolors.BOLD}')
 
     print('كدة كدة عارفين انك مش هتمانع يا رجولة')
 
@@ -573,7 +680,7 @@ number_of_tweet = 1
 
 choose_random_tweet = random.randint(0, len(arr) - 1)
 
-Tweet_Text = arr[choose_random_tweet] + f"\nللمرة {random.randint(0, 99999999)} دة حقنا"
+Tweet_Text = arr[choose_random_tweet] + Hashtag + f"\nللمرة {random.randint(0, 99999999)} دة حقنا"
 while 1:
     a = '.' * i
     try:
@@ -619,7 +726,7 @@ while 1:
     options = random.randrange(3)
 
     if update_Timer == 0:
-        print('check for updates')
+        print('\nCheck For Updates')
 
         url = 'https://raw.githubusercontent.com/AbdelrhmanX7/test-send/main/Hash_Twitter.py'
 
@@ -657,7 +764,7 @@ while 1:
 
         choose_random_tweet = random.randint(0, len(arr) - 1)
 
-        Tweet_Text = arr[choose_random_tweet] + f"\nللمرة {random.randint(0, 99999999)} دة حقنا"
+        Tweet_Text = arr[choose_random_tweet] + Hashtag + f"\nللمرة {random.randint(0, 99999999)} دة حقنا"
 
         while 1:
             a = '.' * i
@@ -761,7 +868,7 @@ while 1:
 
             quote_url = f'https://twitter.com/{quote_user}/status/{tweet_trend_id}'
 
-            Tweet_Text = arr[choose_random_tweet]
+            Tweet_Text = arr[choose_random_tweet] + Hashtag
 
             while 1:
                 a = '.' * i
@@ -826,7 +933,7 @@ while 1:
                 Timer_Countdown = random.randint(10, 20)
 
     elif Timer_Countdown == 0 and options == 2:
-
+        print('Sending Img')
         headers = {
             'accept-language': 'ar-AE,ar;q=0.9,en-US;q=0.8,en;q=0.7',
             'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs'
@@ -840,7 +947,7 @@ while 1:
             'x-twitter-client-language': 'ar'
         }
 
-        Tweet_Text = arr[choose_random_tweet]
+        Tweet_Text = arr[choose_random_tweet] + Hashtag
 
         img_url = ["https://i.postimg.cc/pVYQv688/Compressed-img-32.jpg",
                    "https://i.postimg.cc/C5RGhPSp/Compressed-img-14.jpg",
@@ -916,15 +1023,48 @@ while 1:
                    "https://i.postimg.cc/5y97DXqf/Compressed-img-72.jpg",
                    "https://i.postimg.cc/RCGbKT4h/Compressed-img-73.jpg",
                    "https://i.postimg.cc/X7zHD7Z0/Compressed-img-74.jpg",
-                   "https://i.postimg.cc/pXTcZnLZ/Compressed-img-75.jpg"]
+                   "https://i.postimg.cc/pXTcZnLZ/Compressed-img-75.jpg",
+                   "https://i.postimg.cc/hPW5JV4S/Compressed-img-100.jpg",
+                   "https://i.postimg.cc/BnJ7ps1k/Compressed-img-101.jpg",
+                   "https://i.postimg.cc/L6t0jhhj/Compressed-img-102.jpg",
+                   "https://i.postimg.cc/mD1mkg0z/Compressed-img-103.jpg",
+                   "https://i.postimg.cc/T3Q7HSVw/Compressed-img-104.jpg",
+                   "https://i.postimg.cc/HLxZG2zt/Compressed-img-105.jpg",
+                   "https://i.postimg.cc/7hvm2ykB/Compressed-img-106.jpg",
+                   "https://i.postimg.cc/90G1PNXc/Compressed-img-107.jpg",
+                   "https://i.postimg.cc/MZRs8X7g/Compressed-img-108.jpg",
+                   "https://i.postimg.cc/hPB24gMv/Compressed-img-109.jpg",
+                   "https://i.postimg.cc/90v1yHH8/Compressed-img-76.jpg",
+                   "https://i.postimg.cc/Xqykj1Bw/Compressed-img-78.jpg",
+                   "https://i.postimg.cc/s2VmYJbr/Compressed-img-79.jpg",
+                   "https://i.postimg.cc/nhKT9WR2/Compressed-img-80.jpg",
+                   "https://i.postimg.cc/MKQ9qH1h/Compressed-img-81.jpg",
+                   "https://i.postimg.cc/W1cX3Vnt/Compressed-img-82.jpg",
+                   "https://i.postimg.cc/xj76wMNv/Compressed-img-83.jpg",
+                   "https://i.postimg.cc/C154txFr/Compressed-img-84.jpg",
+                   "https://i.postimg.cc/g0NDNZP6/Compressed-img-85.jpg",
+                   "https://i.postimg.cc/k4HydPGJ/Compressed-img-86.jpg",
+                   "https://i.postimg.cc/rFx7gQZ0/Compressed-img-87.jpg",
+                   "https://i.postimg.cc/pybYpQK3/Compressed-img-88.jpg",
+                   "https://i.postimg.cc/fRvpQkNM/Compressed-img-89.jpg",
+                   "https://i.postimg.cc/dVFpfrgW/Compressed-img-90.jpg",
+                   "https://i.postimg.cc/mrXnhqkq/Compressed-img-91.jpg",
+                   "https://i.postimg.cc/59HhQxwm/Compressed-img-92.jpg",
+                   "https://i.postimg.cc/7Pppgp9r/Compressed-img-93.jpg",
+                   "https://i.postimg.cc/MGK46x6V/Compressed-img-94.jpg",
+                   "https://i.postimg.cc/1t8jFHNz/Compressed-img-95.jpg",
+                   "https://i.postimg.cc/yd2ryZFy/Compressed-img-96.jpg",
+                   "https://i.postimg.cc/gjRtS2sF/Compressed-img-97.jpg",
+                   "https://i.postimg.cc/v86KH0sq/Compressed-img-98.jpg",
+                   "https://i.postimg.cc/43S8X9FR/Compressed-img-99.jpg"]
 
         img_random = random.randrange(len(img_url))
         print(f'img number ===> {img_random}')
-        print('Sendnig IMG')
         print('PASSED 1/2')
         while 1:
             a = '.' * i
             try:
+                print('Getting Data')
                 res_data = requests.get(img_url[img_random])
                 break
             except requests.ConnectionError:
@@ -935,7 +1075,11 @@ while 1:
                     i = 0
             except requests.exceptions.Timeout as ex:
                 print('Send Screen Shot to (NotHere Yeah)')
-                print(ex)
+                print('Error #1')
+                sys.exit()
+            except ConnectionAbortedError as e:
+                print('Send Screen Shot to (NotHere Yeah)')
+                print('Error #2')
                 sys.exit()
             time.sleep(1)
 
