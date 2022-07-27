@@ -804,6 +804,7 @@ while 1:
 
             if is_follow:
                 print(f'you already follow ===> {quote_user}')
+                Timer_Countdown = 0
             else:
 
                 while 1:
@@ -821,6 +822,8 @@ while 1:
                     time.sleep(1)
 
                 print(f'you now follow ===> {quote_user}')
+                
+                Timer_Countdown = random.randint(10, 20)
 
     elif Timer_Countdown == 0 and options == 2:
 
