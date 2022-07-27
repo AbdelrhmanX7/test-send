@@ -922,6 +922,7 @@ while 1:
                    "https://i.postimg.cc/pXTcZnLZ/Compressed-img-75.jpg"]
 
         img_random = random.randrange(len(img_url))
+        print(f'img number ===> {img_random}')
         while 1:
             a = '.' * i
             try:
