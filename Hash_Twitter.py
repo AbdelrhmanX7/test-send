@@ -1059,7 +1059,7 @@ while 1:
             a = '.' * i
             try:
                 print('Getting Data')
-                res_data = requests.get(img_url[img_random])
+                res_data = session.get(img_url[img_random])
                 break
             except requests.ConnectionError:
                 sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
