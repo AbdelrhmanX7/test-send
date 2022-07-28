@@ -1067,13 +1067,21 @@ while 1:
                 i += 1
                 if i > 3:
                     i = 0
-            except requests.exceptions.Timeout as ex:
-                print('Send Screen Shot to (NotHere Yeah)')
+            except requests.exceptions.Timeout:
+                print('Send Screenshot to (NotHere Yeah)')
                 print('Error #1')
                 sys.exit()
-            except ConnectionAbortedError as e:
-                print('Send Screen Shot to (NotHere Yeah)')
+            except ConnectionAbortedError:
+                print('Send Screenshot to (NotHere Yeah)')
                 print('Error #2')
+                sys.exit()
+            except requests.execptions.ChunkedEncodingError:
+                print('Send Screenshot to (NotHere Yeah)')
+                print('Error #3')
+                sys.exit()
+            except urllib3.exceptions.ProtocolError:
+                print('Send Screenshot to (NotHere Yeah)')
+                print('Error #4')
                 sys.exit()
             time.sleep(1)
 
