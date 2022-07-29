@@ -1,4 +1,4 @@
-update_version = 3
+update_version = 4
 import json
 import requests
 import random
@@ -18,7 +18,8 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-
+print (f'{bcolors.OKGREEN}KEEP GOING MANUAL. WE CAN DO IT{bcolors.BOLD}')
+sys.exit()
 Auto_Login_Email = ''
 Auto_Login_PASSWORD = ''
 print(f'{bcolors.WARNING}[*] NEW UPDATE{bcolors.BOLD}')
