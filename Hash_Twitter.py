@@ -1,4 +1,4 @@
-update_version = 1
+update_version = 2
 import json
 import requests
 import random
@@ -22,28 +22,6 @@ class bcolors:
 
 print(f'{bcolors.WARNING}Look who is back{bcolors.BOLD}')
 
-get_data = requests.get('https://script-beta-default-rtdb.firebaseio.com/save_id.json')
-
-data = get_data.json()
-
-loaded_id = []
-
-for key in data:
-    loaded_id.append(data[key]['Twitter_id'])
-
-user_id = input('write your twitter id: ')
-
-check_users = False
-
-for users_id in loaded_id:
-    if user_id == users_id:
-        print(f'{bcolors.OKGREEN}User has been found in beta version{bcolors.BOLD}')
-        check_users = True
-        break
-
-if not check_users:
-    print(f'{bcolors.FAIL}Sorry but you are not in beta version{bcolors.BOLD}')
-    sys.exit()
 Auto_Login_Email = ''
 Auto_Login_PASSWORD = ''
 print(f'{bcolors.WARNING}[*] NEW UPDATE{bcolors.BOLD}')
@@ -51,7 +29,7 @@ print(f'{bcolors.HEADER}Script version ===> [2.6]{bcolors.BOLD}')
 print(
     f'{bcolors.WARNING} لو في اي مشكلة في الاسكريبت ابعت علي جروب احنا شايفنكوا و معاكوا و هنفضل ديما معاكوا [*] {bcolors.BOLD}')
 print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغفر ربنا و لو ينفع ف ممكن تدعيلي و شكرا ليك')
-Hashtag = '#عايزين_نت_غير_محدود'
+Hashtag = '#قاطع_شركات_النت_بمصر'
 
 print(Hashtag)
 
