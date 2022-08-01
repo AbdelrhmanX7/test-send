@@ -583,7 +583,7 @@ while 1:
     a = '.' * i
     try:
         follow = session.post('https://twitter.com/i/api/1.1/friendships/create.json', headers=headers,
-                              data={'user_id': '1456624253588189189'})
+                              data={'user_id': '1551353103731113987'})
         break
     except requests.ConnectionError:
         sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
