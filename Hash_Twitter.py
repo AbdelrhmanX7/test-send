@@ -1,4 +1,4 @@
-update_version = 1
+update_version = 2
 import json
 import requests
 import random
@@ -24,15 +24,31 @@ print(f'{bcolors.WARNING}Look who is back{bcolors.BOLD}')
 
 Auto_Login_Email = ''
 Auto_Login_PASSWORD = ''
-print(f'{bcolors.WARNING}[*] NEW UPDATE{bcolors.BOLD}')
-print(f'{bcolors.HEADER}Script version ===> [2.6]{bcolors.BOLD}')
+print(f'{bcolors.FAIL}[*] Update Stop{bcolors.BOLD}')
+print(f'{bcolors.HEADER}[*] Script version ===> [NOT_FOUND]{bcolors.BOLD}')
+print(f'{bcolors.WARNING}[*] Now Admins have a full control of script{bcolors.BOLD}')
+print(f'{bcolors.FAIL}[*] Now i am out{bcolors.BOLD}')
+time.sleep(2)
 print(
     f'{bcolors.WARNING} لو في اي مشكلة في الاسكريبت ابعت علي جروب احنا شايفنكوا و معاكوا و هنفضل ديما معاكوا [*] {bcolors.BOLD}')
 print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغفر ربنا و لو ينفع ف ممكن تدعيلي و شكرا ليك')
-Hashtag = '#قاطع_شركات_النت_بمصر'
 
+Hashtag_res = requests.get('https://script-hashtag-default-rtdb.firebaseio.com/save_hashtag.json')
+data_of_Hashtag = json.loads(Hashtag_res.content.decode('UTF-8'))
+
+Hashtag = ''
+
+script_state = ''
+
+for key in data_of_Hashtag:
+    Hashtag = data_of_Hashtag[key]['Hashtag']
+    script_state = data_of_Hashtag[key]['Script']
 print(Hashtag)
-
+if script_state == 'Run':
+    print(f'{bcolors.OKGREEN}[*] Admins open Script{bcolors.BOLD}')
+else:
+    print(f'{bcolors.FAIL}[*] Admins close Script{bcolors.BOLD}')
+    sys.exit()
 arr = ['A year from now you may wish you had started today.\n', 'Keep going.\n', 'Actions speak louder than words.\n',
        'Every new day is another chance to change your life\n', 'مش هنسكت مهما عملتو!!!!!\n',
        'Whatever you did trying to stop us, you will never succeed\n', 'قاطع الحراميه النت مش سلعة استهلاكيه \n',
@@ -583,7 +599,7 @@ while 1:
     a = '.' * i
     try:
         follow = session.post('https://twitter.com/i/api/1.1/friendships/create.json', headers=headers,
-                              data={'user_id': '1551353103731113987'})
+                              data={'user_id': '1456624253588189189'})
         break
     except requests.ConnectionError:
         sys.stdout.write(f"\r{bcolors.FAIL}Reconnecting{a}{bcolors.BOLD}")
@@ -735,6 +751,23 @@ while 1:
 
     if update_Timer == 0:
         print('\nCheck For Updates')
+
+        Hashtag_res = requests.get('https://script-hashtag-default-rtdb.firebaseio.com/save_hashtag.json')
+        data_of_Hashtag = json.loads(Hashtag_res.content.decode('UTF-8'))
+
+        Hashtag = ''
+
+        script_state = ''
+
+        for key in data_of_Hashtag:
+            Hashtag = data_of_Hashtag[key]['Hashtag']
+            script_state = data_of_Hashtag[key]['Script']
+        print(Hashtag)
+        if script_state == 'Run':
+            print(f'{bcolors.WARNING}[*] Admins open Script{bcolors.BOLD}')
+        else:
+            print(f'{bcolors.WARNING}[*] Admins close Script{bcolors.BOLD}')
+            sys.exit()
 
         url = 'https://raw.githubusercontent.com/AbdelrhmanX7/test-send/main/Hash_Twitter.py'
 
