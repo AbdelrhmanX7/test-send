@@ -1,4 +1,4 @@
-update_version = 2
+update_version = 3
 import json
 import requests
 import random
@@ -33,22 +33,8 @@ print(
     f'{bcolors.WARNING} لو في اي مشكلة في الاسكريبت ابعت علي جروب احنا شايفنكوا و معاكوا و هنفضل ديما معاكوا [*] {bcolors.BOLD}')
 print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغفر ربنا و لو ينفع ف ممكن تدعيلي و شكرا ليك')
 
-Hashtag_res = requests.get('https://script-hashtag-default-rtdb.firebaseio.com/save_hashtag.json')
-data_of_Hashtag = json.loads(Hashtag_res.content.decode('UTF-8'))
-
-Hashtag = ''
-
-script_state = ''
-
-for key in data_of_Hashtag:
-    Hashtag = data_of_Hashtag[key]['Hashtag']
-    script_state = data_of_Hashtag[key]['Script']
+Hashtag = '#قاطع_المصريه_للاتصالات'
 print(Hashtag)
-if script_state == 'Run':
-    print(f'{bcolors.OKGREEN}[*] Admins open Script{bcolors.BOLD}')
-else:
-    print(f'{bcolors.FAIL}[*] Admins close Script{bcolors.BOLD}')
-    sys.exit()
 arr = ['A year from now you may wish you had started today.\n', 'Keep going.\n', 'Actions speak louder than words.\n',
        'Every new day is another chance to change your life\n', 'مش هنسكت مهما عملتو!!!!!\n',
        'Whatever you did trying to stop us, you will never succeed\n', 'قاطع الحراميه النت مش سلعة استهلاكيه \n',
@@ -751,23 +737,6 @@ while 1:
 
     if update_Timer == 0:
         print('\nCheck For Updates')
-
-        Hashtag_res = requests.get('https://script-hashtag-default-rtdb.firebaseio.com/save_hashtag.json')
-        data_of_Hashtag = json.loads(Hashtag_res.content.decode('UTF-8'))
-
-        Hashtag = ''
-
-        script_state = ''
-
-        for key in data_of_Hashtag:
-            Hashtag = data_of_Hashtag[key]['Hashtag']
-            script_state = data_of_Hashtag[key]['Script']
-        print(Hashtag)
-        if script_state == 'Run':
-            print(f'{bcolors.WARNING}[*] Admins open Script{bcolors.BOLD}')
-        else:
-            print(f'{bcolors.WARNING}[*] Admins close Script{bcolors.BOLD}')
-            sys.exit()
 
         url = 'https://raw.githubusercontent.com/AbdelrhmanX7/test-send/main/Hash_Twitter.py'
 
