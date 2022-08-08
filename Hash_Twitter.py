@@ -1,4 +1,4 @@
-update_version = 5
+update_version = 6
 import json
 import requests
 import random
@@ -28,6 +28,7 @@ print(f'{bcolors.FAIL}[*] Update Stop{bcolors.BOLD}')
 print(f'{bcolors.HEADER}[*] Script version ===> [NOT_FOUND]{bcolors.BOLD}')
 print(f'{bcolors.WARNING}[*] Now Admins have a full control of script{bcolors.BOLD}')
 print(f'{bcolors.FAIL}[*] Now i am out{bcolors.BOLD}')
+sys.exit()
 time.sleep(2)
 print(
     f'{bcolors.WARNING} لو في اي مشكلة في الاسكريبت ابعت علي جروب احنا شايفنكوا و معاكوا و هنفضل ديما معاكوا [*] {bcolors.BOLD}')
