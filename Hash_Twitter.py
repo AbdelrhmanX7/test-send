@@ -1,4 +1,4 @@
-update_version = 6
+update_version = 1
 import json
 import requests
 import random
@@ -24,17 +24,15 @@ print(f'{bcolors.WARNING}Look who is back{bcolors.BOLD}')
 
 Auto_Login_Email = ''
 Auto_Login_PASSWORD = ''
-print(f'{bcolors.FAIL}[*] Update Stop{bcolors.BOLD}')
-print(f'{bcolors.HEADER}[*] Script version ===> [NOT_FOUND]{bcolors.BOLD}')
+
+print(f'{bcolors.HEADER}[*] Script version ===> [2.8]{bcolors.BOLD}')
 print(f'{bcolors.WARNING}[*] Now Admins have a full control of script{bcolors.BOLD}')
-print(f'{bcolors.FAIL}[*] Now i am out{bcolors.BOLD}')
-sys.exit()
-time.sleep(2)
-print(
-    f'{bcolors.WARNING} لو في اي مشكلة في الاسكريبت ابعت علي جروب احنا شايفنكوا و معاكوا و هنفضل ديما معاكوا [*] {bcolors.BOLD}')
+
+print(f'{bcolors.WARNING} لو في اي مشكلة في الاسكريبت ابعت علي جروب احنا شايفنكوا و معاكوا و هنفضل ديما معاكوا [*] {bcolors.BOLD}')
 print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغفر ربنا و لو ينفع ف ممكن تدعيلي و شكرا ليك')
 
-Hashtag = '#هنفلسكم_شركه_we'
+Hashtag = '#مقاطعة_وي_مستمرة'
+
 print(Hashtag)
 arr = ['A year from now you may wish you had started today.\n', 'Keep going.\n', 'Actions speak louder than words.\n',
        'Every new day is another chance to change your life\n', 'مش هنسكت مهما عملتو!!!!!\n',
