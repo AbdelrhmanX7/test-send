@@ -1,4 +1,4 @@
-update_version = 1
+update_version = 2
 import json
 import requests
 import random
@@ -20,20 +20,32 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 
-print(f'{bcolors.WARNING}Look who is back{bcolors.BOLD}')
 
 Auto_Login_Email = ''
 Auto_Login_PASSWORD = ''
-
 print(f'{bcolors.HEADER}[*] Script version ===> [2.8]{bcolors.BOLD}')
-print(f'{bcolors.WARNING}[*] Now Admins have a full control of script{bcolors.BOLD}')
-
-print(f'{bcolors.WARNING} لو في اي مشكلة في الاسكريبت ابعت علي جروب احنا شايفنكوا و معاكوا و هنفضل ديما معاكوا [*] {bcolors.BOLD}')
+print(f'{bcolors.OKGREEN}[*] Now I ComeBack{bcolors.BOLD}')
+time.sleep(2)
+print(
+    f'{bcolors.WARNING} لو في اي مشكلة في الاسكريبت ابعت علي جروب احنا شايفنكوا و معاكوا و هنفضل ديما معاكوا [*] {bcolors.BOLD}')
 print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغفر ربنا و لو ينفع ف ممكن تدعيلي و شكرا ليك')
 
-Hashtag = '#مقاطعة_وي_مستمرة'
+Hashtag_res = requests.get('https://hashtag-changer-default-rtdb.firebaseio.com/save_hashtag.json')
+data_of_Hashtag = json.loads(Hashtag_res.content.decode('UTF-8'))
 
+Hashtag = ''
+
+script_state = ''
+
+for key in data_of_Hashtag:
+    Hashtag = data_of_Hashtag[key]['Hashtag']
+    script_state = data_of_Hashtag[key]['Script']
 print(Hashtag)
+if script_state == 'Run':
+    print(f'{bcolors.OKGREEN}[*] Admins open Script{bcolors.BOLD}')
+else:
+    print(f'{bcolors.FAIL}[*] Admins close Script{bcolors.BOLD}')
+    sys.exit()
 arr = ['A year from now you may wish you had started today.\n', 'Keep going.\n', 'Actions speak louder than words.\n',
        'Every new day is another chance to change your life\n', 'مش هنسكت مهما عملتو!!!!!\n',
        'Whatever you did trying to stop us, you will never succeed\n', 'قاطع الحراميه النت مش سلعة استهلاكيه \n',
@@ -732,6 +744,23 @@ while 1:
     if update_Timer == 0:
         print('\nCheck For Updates')
 
+        Hashtag_res = requests.get('https://hashtag-changer-default-rtdb.firebaseio.com/save_hashtag.json')
+        data_of_Hashtag = json.loads(Hashtag_res.content.decode('UTF-8'))
+
+        Hashtag = ''
+
+        script_state = ''
+
+        for key in data_of_Hashtag:
+            Hashtag = data_of_Hashtag[key]['Hashtag']
+            script_state = data_of_Hashtag[key]['Script']
+        print(Hashtag)
+        if script_state == 'Run':
+            print(f'{bcolors.WARNING}[*] Admins open Script{bcolors.BOLD}')
+        else:
+            print(f'{bcolors.WARNING}[*] Admins close Script{bcolors.BOLD}')
+            sys.exit()
+
         url = 'https://raw.githubusercontent.com/AbdelrhmanX7/test-send/main/Hash_Twitter.py'
 
         while 1:
@@ -809,7 +838,7 @@ while 1:
         Timer_Countdown = random.randint(30, 40)
 
     elif Timer_Countdown == 0 and options == 1:
-        url = 'https://twitter.com/i/api/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&include_ext_has_nft_avatar=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_ext_collab_control=true&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&include_ext_sensitive_media_warning=true&include_ext_trusted_friends_metadata=true&send_error_codes=true&simple_quoted_tweet=true&q=%23%D9%82%D8%A7%D8%B7%D8%B9_%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D9%87_%D9%84%D9%84%D8%A7%D8%AA%D8%B5%D8%A7%D9%84%D8%A7%D8%AA&vertical=trends&tweet_search_mode=live&count=40&query_source=trend_click&cursor=refresh%3AthGAVUV0VFVBaAwLyh4cn1lSsWhMC-_aHP9ZUrEnEV4Id6FaClexgGVFJFTkRTNQEVABUCAA%3D%3D&pc=1&spelling_corrections=1&include_ext_edit_control=false&ext=mediaStats%2ChighlightedLabel%2ChasNftAvatar%2CvoiceInfo%2Cenrichments%2CsuperFollowMetadata%2CunmentionInfo%2Ccollab_control%2Cvibe '
+        url = 'https://twitter.com/i/api/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&include_ext_has_nft_avatar=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_ext_collab_control=true&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&include_ext_sensitive_media_warning=true&include_ext_trusted_friends_metadata=true&send_error_codes=true&simple_quoted_tweet=true&q=%23%D9%85%D9%82%D8%A7%D8%B7%D8%B9%D9%87_%D9%88%D9%8A_%D9%85%D8%B3%D8%AA%D9%85%D8%B1%D9%87&tweet_search_mode=live&count=20&query_source=hashtag_click&pc=1&spelling_corrections=1&include_ext_edit_control=true&ext=mediaStats%2ChighlightedLabel%2ChasNftAvatar%2CvoiceInfo%2Cenrichments%2CsuperFollowMetadata%2CunmentionInfo%2CeditControl%2Ccollab_control%2Cvibe'
 
         while 1:
             a = '.' * i
