@@ -1,4 +1,4 @@
-update_version = 2
+update_version = 3
 import json
 import requests
 import random
