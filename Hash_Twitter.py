@@ -33,13 +33,9 @@ print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغف�
 Hashtag_res = requests.get('https://hashtag-changer-default-rtdb.firebaseio.com/save_hashtag.json')
 data_of_Hashtag = json.loads(Hashtag_res.content.decode('UTF-8'))
 
-Hashtag = ''
+Hashtag = data_of_Hashtag['Hashtag']
+script_state = data_of_Hashtag['Script']
 
-script_state = ''
-
-for key in data_of_Hashtag:
-    Hashtag = data_of_Hashtag[key]['Hashtag']
-    script_state = data_of_Hashtag[key]['Script']
 print(Hashtag)
 if script_state == 'Run':
     print(f'{bcolors.OKGREEN}[*] Admins open Script{bcolors.BOLD}')
