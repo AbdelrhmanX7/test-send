@@ -1,4 +1,4 @@
-update_version = 3
+update_version = 1
 import json
 import requests
 import random
@@ -392,7 +392,7 @@ else:
 
 print(f'{bcolors.OKGREEN}USER_FIND{bcolors.BOLD}')
 
-flow_toke = flow_toke[:-1] + '5'
+flow_toke = flow_toke[:-1] + '8'
 
 if os.path.exists('Twitter_login.txt'):
     file = open('Twitter_login.txt', 'r')
@@ -502,7 +502,7 @@ else:
             break
         print(f'{bcolors.FAIL}Write a correct password{bcolors.BOLD}')
 
-flow_toke = flow_toke[:-1] + '6'
+flow_toke = flow_toke[:-1] + '11'
 
 print(f'{bcolors.OKGREEN}Password is correct{bcolors.BOLD}')
 
