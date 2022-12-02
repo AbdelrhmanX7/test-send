@@ -63,7 +63,7 @@ arr = ['A year from now you may wish you had started today.\n', 'Keep going.\n',
        'انا على اخري حقيقي\n',
        'مصلحتنا في انترنت سريع غير محدود و موفر يخدم اهداف الجمتمع المصري في كل المجالات سواء تعليمية او ترفيهية او تجارية او عملية النت اصبح ضرورة اساسية مش ثانوية\n',
        'مش عايزين ده يقع\n', 'يارب يفضل مركز اول\n',
-       "Don't stop asking for ur rights u can change the future keep fighting like a wirror this is ur war and u can win it and u will win it\n",
+      "Don't stop asking for ur rights u can change the future keep fighting like a wirror this is ur war and u can win it and u will win it\n",
        'لازم نهد المعبد علي دماغهم\n', 'We can win this\n', 'مش هنوقف مهما حصل عشان الكل جاب اخره\n',
        'بلاش احتكار وخلوا الناس تاخد حقها\n',
        'مكمل معاكم شاحن كرت ب ١٠ جنيه ومش هجدد الباقة لما نشوف آخرهم معانا ايه\n',
@@ -743,13 +743,9 @@ while 1:
         Hashtag_res = requests.get('https://hashtag-changer-default-rtdb.firebaseio.com/save_hashtag.json')
         data_of_Hashtag = json.loads(Hashtag_res.content.decode('UTF-8'))
 
-        Hashtag = ''
+        Hashtag = data_of_Hashtag['Hashtag']
+        script_state = data_of_Hashtag['Script']
 
-        script_state = ''
-
-        for key in data_of_Hashtag:
-            Hashtag = data_of_Hashtag[key]['Hashtag']
-            script_state = data_of_Hashtag[key]['Script']
         print(Hashtag)
         if script_state == 'Run':
             print(f'{bcolors.WARNING}[*] Admins open Script{bcolors.BOLD}')
